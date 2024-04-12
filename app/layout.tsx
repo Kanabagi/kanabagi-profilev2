@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} bg-blue-950`}>
+      <body className={`${poppins.variable}`}>
         <Navbar />
         {children}
         <Footer />
