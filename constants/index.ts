@@ -20,3 +20,22 @@ export const nav = [
     ],
   },
 ];
+
+export const footer = [
+  {
+    contact: [
+      {
+        name: 'Jl. Jiwa Besar No.6, Kota Tasikmalaya',
+        url: 'https://maps.app.goo.gl/6RjgyyNbSw3yKeZD8',
+      },
+      {
+        name: 'kanabagigroup@gmail.com',
+        url: 'mailto:kanabagigroup@gmail.com',
+      },
+      {
+        name: '+6289518706845',
+        url: 'https://api.whatsapp.com/send/?phone=6289518706845&text&type=phone_number&app_absent=0',
+      },
+    ],
+  },
+];
