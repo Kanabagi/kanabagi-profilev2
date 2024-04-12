@@ -1,9 +1,16 @@
-import Image from "next/image";
+"use client"
+
+import HeroSection from "@/components/Home/HeroSection";
+
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen">
-      
+    <main>
+          <HeroSection />
+          <section className="h-[9999px]">
+
+          </section>
     </main>
   );
 }

@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ChatUs from '@/components/ChatUs';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,12 +21,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={`${poppins.variable} bg-blue-950`}>
+      <body className={`${poppins.variable}`}>
         <Navbar />
         {children}
+
+        <ChatUs />
         <Footer />
+
       </body>
     </html>
   );
