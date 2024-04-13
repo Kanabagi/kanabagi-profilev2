@@ -12,6 +12,7 @@ export default function Hamburger() {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <button
@@ -37,7 +38,7 @@ export default function Hamburger() {
       <div
         className={`fixed top-0 left-0 w-full h-screen bg-[#2E3192] z-40 flex flex-col justify-between items-center py-10 ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
-        } transition-transform duration-300 ease-in-out`}
+        } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div
           className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center`}
