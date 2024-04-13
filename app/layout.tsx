@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer';
 import ChatUs from '@/components/ChatUs';
 
@@ -21,7 +21,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body className={`${poppins.variable}`}>
@@ -30,7 +29,6 @@ export default function RootLayout({
 
         <ChatUs />
         <Footer />
-
       </body>
     </html>
   );
