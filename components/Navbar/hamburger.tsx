@@ -78,7 +78,7 @@ export default function Hamburger() {
         >
           Kanabagi.
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 z-10">
           {nav[0].navMenu?.map((item, index) => (
             <Link
               key={index}
@@ -111,6 +111,10 @@ export default function Hamburger() {
             </Link>
           ))}
         </div>
+
+        <Image src="/icons/binary.png" alt='' height={200} width={200} 
+        className={`absolute object-contain top-[150px] -left-[60px] ${isOpen ? "opacity-15" : "opacity-0"} transition-all duration-1000`}/>
+        <Image src="/icons/coding.png" alt='' height={300} width={300} className={`absolute object-contain bottom-[50px] -right-[100px] ${isOpen ? "opacity-15" : "opacity-0"} transition-all duration-1000`}/>
       </div>
     </>
   );
