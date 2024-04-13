@@ -85,11 +85,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="wrapper border-t text-[#F8FAFC] flex justify-center items-center">
-        © 2024 &nbsp;
+        © 2024&nbsp;
         <span className="font-semibold">Kanabagi</span>. All rights reserved.
       </div>
     </div>
-  )
+  );
 };
 
 export default Footer;
