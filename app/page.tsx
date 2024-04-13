@@ -6,7 +6,7 @@ import HeroSection from "@/components/Home/HeroSection";
 export default function Home() {
 
   return (
-    <main>
+    <main className="">
           <HeroSection />
           <section className="h-[9999px]">
 
