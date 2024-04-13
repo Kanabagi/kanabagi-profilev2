@@ -11,7 +11,7 @@ const OurGoals = () => {
             <div className='text-gray-50 flex flex-col gap-2 z-10 md:mt-20 lg:mt-0'>
                 <div className='flex items-center gap-3'>
                     <div className='p-2 bg-white rounded-full'>
-                        <Image src="/icons/coding-system-blue.png" alt='' height={30} width={30} />
+                        <Image src="/icons/terminal.png" alt='' height={30} width={30} />
                     </div>
                     <p className='font-semibold text-[20px]'>
                         Our {" "}
