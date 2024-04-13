@@ -17,7 +17,7 @@ const AfterHesec = () => {
                             Where the idea becomes a digital form.
                         </span>
                         <Image src="/icons/quote.png" alt='' width={50} height={50} className='absolute top-[70px] translate-x-[300px] hidden md:block' />
-                        <Image src="/icons/quoteblack.png" alt='' width={250} height={250} className='absolute top-0 -left-16 block md:hidden opacity-15' />
+                        {/* <Image src="/icons/quoteblack.png" alt='' width={250} height={250} className='absolute top-0 -left-16 block md:hidden opacity-15' /> */}
                         <Image src="/icons/quote.png" alt='' width={40} height={40} className='block md:hidden' />
                     </div>
                 </div>
