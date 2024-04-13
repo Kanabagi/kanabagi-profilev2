@@ -1,12 +1,7 @@
 import React from 'react'
 import { Mouse } from "lucide-react";
 import Image from "next/image";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+import AccordionHS from './AccordionHS';
 
 
 const HeroSection = () => {
@@ -33,22 +28,7 @@ const HeroSection = () => {
                         Welcome to innovation, reliability, and digital empowerment.</p>
 
                     {/* ITS ON SMALL DEVICES */}
-                        <Accordion type="single" collapsible className='md:hidden block'>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className='text-white hover:no-underline'>
-                                    <div className="gap-4 items-center flex">
-                                        <Image src="/icons/chat.png" alt="" width={30} height={30} />
-                                        <h2 className="font-medium text-[20px] text-white">What we do?</h2>
-                                    </div>
-                                </AccordionTrigger>
-                                <AccordionContent className='text-gray-300 tracking-wide leading-relaxed'>
-                                    Experience seamless web development tailored to your vision.
-                                    Let us handle the complexities while you focus on your business.
-                                    Welcome to innovation, reliability, and digital empowerment.s
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-
+                    <AccordionHS />
                 </div>
             </div>
 

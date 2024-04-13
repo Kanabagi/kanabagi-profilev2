@@ -32,7 +32,7 @@ export default function Navbar() {
             Kanabagi.
           </Link>
           <div className="border-r border-[#F8FAFC] md:flex hidden" />
-          <div className="lg:flex items-center gap-8 hidden">
+          <div className="md:flex items-center gap-8 hidden">
             {nav[0].navMenu?.map((item, index) => (
               <Link
                 key={index}

@@ -4,7 +4,7 @@ import { nav } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Hamburger() {
   const pathname = usePathname();
@@ -13,10 +13,42 @@ export default function Hamburger() {
     setIsOpen(!isOpen);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const useEffectScroll = () => {
+    useEffect(() => {
+      const html = document.documentElement;
+      const scrollBlocked = isOpen;
+
+      if (scrollBlocked) {
+        html.classList.add('overflow-hidden');
+      } else {
+        html.classList.remove('overflow-hidden');
+      }
+    }, [isOpen]);
+  };
+  useEffectScroll();
+
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <button
-        className="flex flex-col gap-1 z-50 lg:hidden"
+        className="flex flex-col gap-1 z-50 md:hidden"
         onClick={handleClick}
       >
         <div
@@ -41,20 +73,25 @@ export default function Hamburger() {
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div
-          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center`}
+          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center bg-blue-950 w-full h-[100px] -mt-10`}
         >
           Kanabagi.
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 z-10">
           {nav[0].navMenu?.map((item, index) => (
             <Link
               key={index}
               href={item.path}
-              className={` text-base ${
+              className={` text-[20px] sm:text-[24px] ${
                 pathname === item.path
                   ? 'font-medium text-white'
                   : 'text-gray-400'
-              }`}
+              } ${
+                isOpen
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-20 opacity-20'
+              } transition-all duration-1000 `}
+              onClick={handleClose}
             >
               {item.name}
             </Link>
@@ -65,7 +102,9 @@ export default function Hamburger() {
             <Link
               key={index}
               href={item.path}
-              className="group relative h-[35px] w-[35px] hover:scale-95 transition-transform duration-300 ease-in-out"
+              className={`group relative h-[35px] w-[35px] hover:scale-95 transition-transform duration-300 ease-in-out ${
+                isOpen ? 'translate-x-0' : 'translate-x-20'
+              } transition-all !duration-1000`}
             >
               <Image
                 src={item.img}
@@ -78,6 +117,25 @@ export default function Hamburger() {
             </Link>
           ))}
         </div>
+
+        <Image
+          src="/icons/binary.png"
+          alt=""
+          height={200}
+          width={200}
+          className={`absolute object-contain top-[150px] -left-[60px] ${
+            isOpen ? 'opacity-15' : 'opacity-0'
+          } transition-all duration-1000`}
+        />
+        <Image
+          src="/icons/coding.png"
+          alt=""
+          height={300}
+          width={300}
+          className={`absolute object-contain bottom-[50px] -right-[100px] ${
+            isOpen ? 'opacity-15' : 'opacity-0'
+          } transition-all duration-1000`}
+        />
       </div>
     </>
   );
