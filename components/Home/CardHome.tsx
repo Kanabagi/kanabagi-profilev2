@@ -6,13 +6,13 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 
 const CardHome = ({ works }: { works: homeCardProps }) => {
     return (
-        <div className='group relative flex items-center justify-items-center shadow-md rounded-[12px] overflow-hidden'>
+        <div className='group relative flex items-center justify-items-center shadow-md rounded-[12px] overflow-hidden' key={works.name}>
             <Image
                 src={works.imgUrl}
                 alt=''
                 width={800}
                 height={600}
-                className='rounded-[12px] group-hover:blur-[1px]' />
+                className='rounded-[12px] ' />
 
             <div className='w-full h-full bg-gray-700 absolute opacity-0 group-hover:opacity-80 transition-all duration-400 rounded-[12px]' />
 
