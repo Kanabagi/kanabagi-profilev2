@@ -25,8 +25,8 @@ export const footer = [
   {
     contact: [
       {
-        name: 'Jl. Jiwa Besar No.6, Kota Tasikmalaya',
-        url: 'https://maps.app.goo.gl/6RjgyyNbSw3yKeZD8',
+        name: 'Jl. Jiwa Besar No.27, Kota Tasikmalaya',
+        url: 'https://maps.app.goo.gl/21LCzdjhva1SnKzt8',
       },
       {
         name: 'kanabagigroup@gmail.com',
