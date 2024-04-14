@@ -2,6 +2,31 @@ import { FaHouseChimney, FaLaptopCode } from 'react-icons/fa6';
 import { IoIosBriefcase } from 'react-icons/io';
 import { RiContactsBook2Fill, RiCustomerService2Fill } from 'react-icons/ri';
 
+export const about = [
+  {
+    cardData: [
+      {
+        name: 'Meticulously Planned',
+        desc: 'Successful projects begin with meticulous planning. We tailor our services to align with your objectives and timeline, ensuring a seamless launch.',
+        image: '/icons/about-card1.png',
+        hover: '/icons/about-card1-hover.png',
+      },
+      {
+        name: 'Exquisite Design',
+        desc: 'With our mantra of "You envision, we deliver," we create applications that not only meet but exceed user expectations. Our designs are crafted to anticipate and fulfill user needs effortlessly.',
+        image: '/icons/about-card2.png',
+        hover: '/icons/about-card2-hover.png',
+      },
+      {
+        name: 'Intelligently Executed',
+        desc: 'Efficiency is key, and we pride ourselves on finding the smartest solutions. Our applications are user-friendly by design, ensuring ease of use without sacrificing functionality or complexity.',
+        image: '/icons/about-card3.png',
+        hover: '/icons/about-card3-hover.png',
+      },
+    ],
+  },
+];
+
 export const nav = [
   {
     navMenu: [
@@ -44,16 +69,16 @@ export const featuredWorksHome = [
   {
     name: 'Portofolio',
     imgUrl: '/images/iki.png',
-    link: 'https://rifky-portfolio.vercel.app/'
+    link: 'https://rifky-portfolio.vercel.app/',
   },
   {
     name: 'Kanabagi Chat',
     imgUrl: '/images/ahmad2.png',
-    link: '/works'
+    link: '/works',
   },
   {
     name: 'Kanabagi Drive',
     imgUrl: '/images/ahmad1.png',
-    link: 'https://kanabagi-drive.vercel.app/'
+    link: 'https://kanabagi-drive.vercel.app/',
   },
-]
+];
