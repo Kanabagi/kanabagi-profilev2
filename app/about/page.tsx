@@ -1,9 +1,20 @@
-import React from 'react'
+import Hero from '@/components/hero';
 
-const page = () => {
+export default function AboutPage() {
   return (
-    <div>ABOUT</div>
-  )
+    <>
+      <div id="target-section">
+        <Hero
+          bgImg="bg-heroAbout"
+          image="/icons/chat.png"
+          name="About Us"
+          button="Interact With Us"
+          linkTo="#about"
+        >
+          <span>Pioneering Web Development</span>
+          <span className="text-[#00A2DF]">&nbsp;Solutions</span>
+        </Hero>
+      </div>
+    </>
+  );
 }
-
-export default page
