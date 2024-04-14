@@ -57,3 +57,18 @@ export const featuredWorksHome = [
     link: 'https://kanabagi-drive.vercel.app/'
   },
 ]
+
+export const servicesHome = [
+  {
+    name: "Web Development",
+    desc: "We provide custom website design and development, whenever you need a personal website, corporate website, product catalog or online store we here to help.",
+    imgUrl: '/icons/website-white.png',
+    imgUrlBlue: '/icons/website-blue.png',
+  },
+  {
+    name: "UI/UX Development",
+    desc: "Crafting exceptional digital experiences. Our UI/UX developers meticulously blend aesthetics with functionality to create captivating interfaces that resonate with users.",
+    imgUrl: '/icons/uiux-w.png',
+    imgUrlBlue: '/icons/uiux-blue.png',
+  }
+]
