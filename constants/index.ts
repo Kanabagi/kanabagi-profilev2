@@ -72,3 +72,30 @@ export const servicesHome = [
     imgUrlBlue: '/icons/uiux-blue.png',
   }
 ]
+
+export const techStacks = [
+  {
+    name: "NextJS",
+    imgUrl: "/images/nextjs.png",
+  },
+  {
+    name: "TypeScript",
+    imgUrl: "/images/typescript.png",
+  },
+  {
+    name: "Tailwind CSS",
+    imgUrl: "/images/Tailwind.png",
+  },
+  {
+    name: "Shadcn",
+    imgUrl: "/images/shadcn.png",
+  },
+  {
+    name: "React",
+    imgUrl: "/images/react.png",
+  },
+  {
+    name: "Bootstrap",
+    imgUrl: "/images/bootstrap.png",
+  },
+]

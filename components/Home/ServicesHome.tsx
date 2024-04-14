@@ -4,7 +4,7 @@ import React from 'react'
 
 const ServicesHome = () => {
     return (
-        <section className='md:py-40 py-20'>
+        <section className='md:pt-40 pt-20'>
             <div className='bg-[#2e3192] w-full py-10 flex items-center justify-center relative overflow-hidden'>
                 <div className='wrapper flex items-center justify-center flex-col gap-6 z-10'>
                     <div className='relative flex flex-col gap-2 items-center'>
@@ -25,7 +25,7 @@ const ServicesHome = () => {
 
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-4 lg:w-full'>
                         {servicesHome.map((services) => (
-                            <div className='group flex bg-gray-50 hover:bg-[#00a2df] rounded-[12px] hover:border-white p-4 border-l-8 border-[#00a2df] py-10 items-center justify-center transition-all duration-200 ease-in-out hover:-translate-y-2'>
+                            <div className='group flex bg-gray-50 hover:bg-[#00a2df] rounded-[12px] hover:border-white p-4 border-l-8 border-[#00a2df] py-10 items-center justify-center transition-all duration-200 ease-in-out hover:-translate-y-2' key={services.name}>
                                 <div className='flex gap-6'>
                                     <div className='bg-[#00a2df] p-4 w-max h-max rounded-full block group-hover:hidden opacity-100 group-hover:opacity-0 transition-all duration-1000'>
                                         <Image src={services.imgUrl} alt='' width={60} height={60} className='' />

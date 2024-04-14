@@ -28,7 +28,7 @@ const FeaturedWorks = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-2 w-full gap-4 md:gap-2 place-items-center'>
           {featuredWorksHome.map((works) => (
-            <CardHome works={works} />
+            <CardHome works={works} key={works.name}/>
           ))}
           <div className='hidden w-full md:flex justify-center items-center bg-gray-100 shadow-md h-full rounded-[12px] flex-col gap-2'>
             <span className='text-gray-400 text-[24px] font-medium'>You are the next</span>
