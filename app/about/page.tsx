@@ -1,3 +1,4 @@
+import WhoAreWe from '@/components/About/who-are-we';
 import Hero from '@/components/hero';
 import Tagline from '@/components/tagline';
 
@@ -16,6 +17,7 @@ export default function AboutPage() {
           <span className="text-[#00A2DF]">&nbsp;Solutions</span>
         </Hero>
         <Tagline />
+        <WhoAreWe />
       </div>
     </>
   );
