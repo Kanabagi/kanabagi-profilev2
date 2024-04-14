@@ -1,9 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import OurGoals from './OurGoals'
-import OurProcess from './OurProcess'
-import { Separator } from "@/components/ui/separator"
-import Afterhesec2 from './Afterhesec2'
 import Tatamlainan from './Tatamlainan'
 
 
