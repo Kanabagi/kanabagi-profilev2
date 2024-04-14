@@ -3,7 +3,10 @@ import Image from 'next/image';
 export default function WhoAreWe() {
   return (
     <>
-      <div className="wrapper relative flex justify-center items-center gap-20 mb-20">
+      <div
+        id="about"
+        className="wrapper relative flex justify-center items-center gap-20 mb-20"
+      >
         <div>
           <Image
             src="/images/about-whoarewe.png"
