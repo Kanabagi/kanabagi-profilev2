@@ -26,7 +26,6 @@ export default function RootLayout({
       <body className={`${poppins.variable}`}>
         <Navbar />
         {children}
-
         <ChatUs />
         <Footer />
       </body>

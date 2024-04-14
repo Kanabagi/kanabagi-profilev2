@@ -1,4 +1,5 @@
 import Hero from '@/components/hero';
+import Tagline from '@/components/tagline';
 
 export default function AboutPage() {
   return (
@@ -14,6 +15,7 @@ export default function AboutPage() {
           <span>Pioneering Web Development</span>
           <span className="text-[#00A2DF]">&nbsp;Solutions</span>
         </Hero>
+        <Tagline />
       </div>
     </>
   );
