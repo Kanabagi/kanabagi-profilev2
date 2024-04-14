@@ -8,7 +8,7 @@ import { Button } from '../ui/button'
 
 const FeaturedWorks = () => {
   return (
-    <section className='min-h-screen max-md:pt-10 flex flex-col justify-items-center'>
+    <section className='min-h-screen pt-20 flex flex-col justify-items-center'>
       <div className='wrapper flex flex-col justify-center items-center gap-4'>
         <div className='relative flex flex-col gap-2 items-center'>
           <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide'>
