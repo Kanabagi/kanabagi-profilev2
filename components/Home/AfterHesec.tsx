@@ -33,9 +33,9 @@ const AfterHesec = () => {
                 </div>
             </section>
 
-            <div className='wrapper bg-[#2e3192] md:block hidden'>
+            {/* <div className='wrapper bg-[#2e3192] md:block hidden'>
                 <Separator className='lg:h-1' />
-            </div>
+            </div> */}
 
             <section className='lg:min-h-screen md:flex flex-col hidden h-[650px]'>
                 <div className='bg-[#2e3192] max-md:py-10 flex-1 flex justify-center items-center relative flex-col overflow-hidden'>

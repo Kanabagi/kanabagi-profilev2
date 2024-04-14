@@ -39,3 +39,21 @@ export const footer = [
     ],
   },
 ];
+
+export const featuredWorksHome = [
+  {
+    name: 'Portofolio',
+    imgUrl: '/images/iki.png',
+    link: 'https://rifky-portfolio.vercel.app/'
+  },
+  {
+    name: 'Kanabagi Chat',
+    imgUrl: '/images/ahmad2.png',
+    link: '/works'
+  },
+  {
+    name: 'Kanabagi Drive',
+    imgUrl: '/images/ahmad1.png',
+    link: 'https://kanabagi-drive.vercel.app/'
+  },
+]
