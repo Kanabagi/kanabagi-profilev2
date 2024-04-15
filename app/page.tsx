@@ -7,7 +7,6 @@ import ServicesHome from '@/components/Home/ServicesHome';
 import TechStacks from '@/components/Home/TechStacks';
 import { useScrollTop } from '@/hooks/scroll-top';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { AiOutlineVerticalAlignTop } from 'react-icons/ai';
 
 export default function Home() {

@@ -30,7 +30,7 @@ const CardHome = ({ works }: { works: homeCardProps }) => {
             </div>
 
             <div className='w-full bottom-0 flex items-center justify-center absolute bg-gray-50 opacity-0 group-hover:opacity-100 translate-y-14 group-hover:translate-y-0 transition-all duration-700 z-10'>
-                <Link href={works.link} className='text-gray-400 font-medium hover:text-gray-700 transition duration-200 w-full py-2 md:py-4 flex items-center justify-center gap-3' target='blank'>
+                <Link href={works.link} className='text-gray-400 font-medium hover:text-gray-700 transition duration-200 w-full py-2 md:py-4 flex items-center justify-center gap-3 max-md:text-[14px]' target='blank'>
                     Click for details
                     <FaArrowRightLong className='' />
                 </Link>

@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link
             href="/"
             className={`font-medium flex items-center text-gray-50 ${
-              showNavbar ? 'text-[24px]' : 'text-[32px]'
+              showNavbar ? 'text-[24px]' : 'text-[28px] md:text-[32px]'
             }`}
           >
             Kanabagi.

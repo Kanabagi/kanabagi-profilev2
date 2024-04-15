@@ -57,6 +57,8 @@ const config = {
         hero: "url('/images/hero.jpg')",
         heroContact: "url('/images/hero-contact.jpg')",
         heroAbout: "url('/images/hero-about.jpg')",
+        heroService: "url('/images/service-hero.jpg')",
+        heroWorks: "url('/images/work-hero.jpg')",
       },
       borderRadius: {
         lg: 'var(--radius)',
