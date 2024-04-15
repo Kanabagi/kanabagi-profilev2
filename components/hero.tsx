@@ -25,7 +25,13 @@ export default function Hero({
       <div className="absolute bg-[#F8FAFC]/60 w-full h-[40px] bottom-0" />
       <div className="text-white z-20 flex flex-col justify-center gap-8 lg:gap-4">
         <div className="flex gap-4 items-center px-4">
-          <Image src={image} alt="..." width={40} height={40} className="" />
+          <Image
+            src={image}
+            alt="..."
+            width={40}
+            height={40}
+            className="w-8 h-8 md:w-10 md:h-10"
+          />
           <div className="text-sm md:text-base lg:text-[24px] text-gray-300 font-semibold ">
             {name}
           </div>
