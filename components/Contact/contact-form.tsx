@@ -1,14 +1,14 @@
 'use client';
 
+import axios from 'axios';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FaCircleXmark } from 'react-icons/fa6';
+import { PulseLoader } from 'react-spinners';
 import Alert from '../alert';
 import ContactHeader from './contact-header';
 import OfficeIdentity from './office-identity';
-import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { PulseLoader } from 'react-spinners';
 
 interface FormInput {
   name: string;
@@ -149,7 +149,7 @@ export default function ContactForm() {
       )}
       {loading && (
         <div className="flex justify-center">
-          <PulseLoader size={15} color={`#1e1b4b`} speedMultiplier={0.5} />
+          <PulseLoader size={15} color={`#2e3192`} speedMultiplier={0.5} />
         </div>
       )}
       {success && (
