@@ -124,3 +124,21 @@ export const techStacks = [
     imgUrl: '/images/bootstrap.png',
   },
 ];
+
+export const featuredWorksDetail = [
+  {
+    name: 'Portofolio',
+    imgUrl: '/images/iki.png',
+    link: 'https://rifky-portfolio.vercel.app/',
+  },
+  {
+    name: 'Kanabagi Chat',
+    imgUrl: '/images/ahmad2.png',
+    link: '',
+  },
+  {
+    name: 'Kanabagi Drive',
+    imgUrl: '/images/ahmad1.png',
+    link: 'https://kanabagi-drive.vercel.app/',
+  },
+]
