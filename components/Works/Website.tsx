@@ -19,9 +19,9 @@ const Website = ({ works }: { works: workProps }) => {
                         href={works.link}
                         target='blank'
                         className='w-full h-full bg-gray-700 absolute opacity-0 group-hover:opacity-80 transition-all duration-500 rounded-[12px]' />
-                    <span className='absolute z-20 text-[48px] font-semibold text-gray-50 opacity-0 group-hover:opacity-100 transition-all duration-700 tracking-wider scale-90 group-hover:scale-100'>
+                    <Link href={works.link} className='absolute z-20 text-[48px] font-semibold text-gray-50 opacity-0 group-hover:opacity-100 transition-all duration-700 tracking-wider scale-90 group-hover:scale-100 select-none'>
                         Visit
-                    </span>
+                    </Link>
 
                     <div className='absolute w-full h-[30px] bg-red-500 animate-spin'/>
                 </div>
