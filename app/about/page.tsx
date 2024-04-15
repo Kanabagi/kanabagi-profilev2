@@ -23,7 +23,7 @@ export default function AboutPage() {
         <SectionHeader
           name="Our Expertise"
           desc="Discover our expertise, which is where your goals start."
-          position="top-3 translate-x-[200px]"
+          position="top-3 translate-x-[100px] md:translate-x-[130px] lg:translate-x-[200px]"
         />
         <AboutCard />
       </div>
