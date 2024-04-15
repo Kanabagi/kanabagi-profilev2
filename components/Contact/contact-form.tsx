@@ -1,83 +1,178 @@
-import Link from 'next/link';
-import React from 'react';
+'use client';
+
+import { FaCheckCircle } from 'react-icons/fa';
+import { FaCircleXmark } from 'react-icons/fa6';
+import Alert from '../alert';
+import ContactHeader from './contact-header';
+import OfficeIdentity from './office-identity';
+import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { PulseLoader } from 'react-spinners';
+
+interface FormInput {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+}
 
 export default function ContactForm() {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [showButton, setShowButton] = useState(true);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormInput>();
+
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+
+  const removeAlert = () => {
+    setSuccess(false);
+    setError(false);
+  };
+
+  const onSubmit = async (data: FormInput) => {
+    try {
+      setLoading(true);
+      setShowButton(false);
+      const response = await axios.post(
+        `https://api.telegram.org/bot${botToken}/sendMessage`,
+        {
+          chat_id: chatId,
+          text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nCompany: ${data.company}\nMessage: ${data.message}`,
+        }
+      );
+      console.log('Message sent successfully:', response.data);
+      setSuccess(true);
+      reset();
+    } catch (error) {
+      setError(true);
+      console.error('Failed to send message:', error);
+    } finally {
+      setLoading(false);
+      setShowButton(true);
+    }
+  };
+
   return (
-    <form action="" className="flex flex-col gap-4 scroll-mt-28" id="contact">
-      <div className="flex flex-col gap-2">
-        <div className="text-3xl font-semibold">Contact Us</div>
-        <p className="text-gray-600 text-sm">
-          Fill out our online contact form, and we'll respond promptly to
-          discuss your needs. Let's create exceptional digital experiences
-          together.
-        </p>
-      </div>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-4 scroll-mt-28"
+      id="contact"
+      noValidate
+    >
+      <ContactHeader />
       <input
         type="text"
-        placeholder="Name"
+        id="name"
+        {...register('name', { required: 'Please enter your name' })}
+        name="name"
+        placeholder="Name*"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
+      {errors.name && (
+        <span className="text-red-500">{errors.name.message}</span>
+      )}
+
       <input
-        type="text"
-        placeholder="Email"
+        type="email"
+        id="email"
+        {...register('email', {
+          required: 'Please enter your email',
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message:
+              'Invalid email address. Please use example@example.com format',
+          },
+        })}
+        aria-invalid={errors.email ? 'true' : 'false'}
+        name="email"
+        placeholder="Email*"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
+      {errors.email && (
+        <span className="text-red-500">{errors.email.message}</span>
+      )}
+
       <input
         type="text"
-        placeholder="Phone"
+        id="phone"
+        placeholder="Phone*"
+        {...register('phone', {
+          required: 'Please enter your phone number',
+          pattern: {
+            value: /^.{9,15}$/,
+            message: 'phone number should be 9 to 15 characters long.',
+          },
+        })}
+        name="phone"
+        aria-invalid={errors.phone ? 'true' : 'false'}
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
+      {errors.phone && (
+        <span className="text-red-500">{errors.phone.message}</span>
+      )}
       <input
         type="text"
+        id="company"
+        {...register('company')}
         placeholder="Company"
+        name="company"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
       <textarea
         rows={5}
-        placeholder="Message"
+        id="message"
+        {...register('message', { required: 'Please enter your message' })}
+        placeholder="Message*"
+        name="message"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
-      <button className="bg-[#2e3192] py-2 rounded-lg text-[#F8FAFC] hover:bg-[#4346b1] transition-colors duration-300 ease-in-out">
-        Send
-      </button>
-      <div className="hidden lg:flex flex-col lg:gap-0 lg:flex-row lg:justify-between">
-        <div className="flex flex-col max-w-48 group">
-          <div className="font-semibold text-base xl:text-lg text-gray-950">
-            Address:
-          </div>
-          <Link
-            href="https://maps.app.goo.gl/21LCzdjhva1SnKzt8"
-            className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
-            target='blank'
-          >
-            Jl. Jiwa Besar No. 27, Kota tasikmalaya
-          </Link>
+      {errors.message && (
+        <span className="text-red-500">{errors.message.message}</span>
+      )}
+      {showButton && (
+        <button
+          type="submit"
+          className="bg-[#2e3192] py-2 rounded-lg text-[#F8FAFC] hover:bg-[#4346b1] transition-colors duration-300 ease-in-out"
+        >
+          Send
+        </button>
+      )}
+      {loading && (
+        <div className="flex justify-center">
+          <PulseLoader size={15} color={`#1e1b4b`} speedMultiplier={0.5} />
         </div>
-        <div className="flex flex-col group">
-          <div className="font-semibold text-base xl:text-lg text-gray-950">
-            Phone:
-          </div>
-          <Link
-            href="https://api.whatsapp.com/send/?phone=6289518706845&text&type=phone_number&app_absent=0"
-            className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
-            target='blank'
-          >
-            +6289518706845
-          </Link>
-        </div>
-        <div className="flex flex-col group">
-          <div className="font-semibold text-base xl:text-lg text-gray-950">
-            Email:
-          </div>
-          <Link
-            href="mailto:kanabagigroup@gmail.com"
-            className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
-            target='blank'
-          >
-            kanabagigroup@gmail.com
-          </Link>
-        </div>
-      </div>
+      )}
+      {success && (
+        <Alert
+          status="Success!"
+          message="Your message has been sent."
+          Icon={FaCheckCircle}
+          iconColor="text-green-500"
+          borderColor="border-green-500"
+          onClick={removeAlert}
+        />
+      )}
+      {error && (
+        <Alert
+          status="Error!"
+          message="Something went wrong, please try again later."
+          Icon={FaCircleXmark}
+          iconColor="text-red-500"
+          borderColor="border-red-500"
+          onClick={removeAlert}
+        />
+      )}
+      <OfficeIdentity />
     </form>
   );
 }
