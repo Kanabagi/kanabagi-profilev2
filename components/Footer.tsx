@@ -5,8 +5,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="bg-[#2E3192] flex flex-col">
-      <div className="wrapper flex flex-col gap-4 md:flex-row md:justify-between">
+    <div className="bg-[#2E3192] flex flex-col pt-4">
+      <div className="wrapper flex flex-col gap-4 md:flex-row md:justify-between pb-10">
         <div className="flex flex-col gap-2">
           <Link
             href="/"
