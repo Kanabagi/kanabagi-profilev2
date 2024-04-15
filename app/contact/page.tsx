@@ -1,7 +1,7 @@
 'use client';
 
-import Map from '@/components/Map';
-import ContactForm from '@/components/contact-form';
+import Map from '@/components/Contact/Map';
+import ContactForm from '@/components/Contact/contact-form';
 import Hero from '@/components/hero';
 
 export default function ContactPage() {
@@ -14,18 +14,13 @@ export default function ContactPage() {
         button="Contact Us"
         linkTo="#contact"
       >
-        <span>Your Web</span>
-        <span className="text-[#00A2DF]">
-          &nbsp;Visionaries&nbsp;
-          <br />
-        </span>
-        <span>Here</span>
+        Your Web <span className="text-[#00a2df]">Visionaries</span> Here
       </Hero>
-      <div className="flex my-[125px] wrapper justify-center items-center gap-8 h-[700px]">
-        <div className="w-1/2">
+      <div className="flex my-[125px] wrapper flex-col md:flex-row justify-center items-center gap-8 md:h-[700px]">
+        <div className="md:w-1/2 w-full">
           <ContactForm />
         </div>
-        <div className="w-1/2 border bg-slate-300 h-full z-10">
+        <div className="md:w-1/2 w-full border bg-slate-300 h-[480px] md:h-full z-10">
           <Map />
         </div>
       </div>

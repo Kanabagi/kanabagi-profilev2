@@ -5,7 +5,7 @@ export default function WhoAreWe() {
     <>
       <div
         id="about"
-        className="wrapper relative flex justify-center items-center gap-20 mb-20"
+        className="wrapper relative flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-20 mb-20 scroll-mt-20"
       >
         <div>
           <Image
@@ -13,20 +13,27 @@ export default function WhoAreWe() {
             alt="..."
             width={510}
             height={510}
+            className="w-[300px] h-[300px] md:w-auto md:h-auto"
           />
         </div>
         <div>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
-              <Image src="/icons/quote.png" alt="..." width={50} height={50} />
-              <span className="text-[32px] font-medium text-[#6B7280]">
+              <Image
+                src="/icons/quote.png"
+                alt="..."
+                width={50}
+                height={50}
+                className="w-[30px] h-[30px] md:w-[40px] md:h-[40px] lg:w-[50px] lg:h-[50px]"
+              />
+              <span className="text-base md:text-lg text-[32px] font-medium text-[#6B7280]">
                 Who Are We
               </span>
             </div>
-            <div className="text-[48px] font-semibold text-[#020617]">
+            <div className="text-3xl md:text-4xl lg:text-[48px] font-semibold text-[#020617]">
               Your Partners in Digital Evolution
             </div>
-            <div className="flex flex-col gap-10 max-w-[860px] border-t border-[#6B7280] pt-8 text-[20px] text-[#6B7280]">
+            <div className="flex flex-col gap-10 max-w-[560px] lg:max-w-[860px] border-t border-[#6B7280] pt-8 text-sm md:text-base lg:text-[20px] text-[#6B7280]">
               <p>
                 Your Partners in Digital Evolution" signifies our commitment to
                 being more than just service providers; we're collaborators in
@@ -50,7 +57,7 @@ export default function WhoAreWe() {
           alt="..."
           width={400}
           height={400}
-          className="absolute opacity-15 top-32 right-0"
+          className="absolute opacity-15 top-[440px] md:top-24 lg:top-32 right-0 h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px]"
         />
       </div>
     </>
