@@ -9,7 +9,7 @@ const ServicesHome = () => {
                 <div className='wrapper flex items-center justify-center flex-col gap-6 z-10'>
                     <div className='relative flex flex-col gap-2 items-center'>
                         <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide text-white'>
-                            OUR SERVICES
+                            Our Services
                         </h1>
                         <p className='text-gray-400 max-w-md sm:max-w-lg md:max-w-2xl text-center max-md:text-[16px]'>
                             We specialize in crafting exceptional digital experiences through our comprehensive web development and UI/UX design services.

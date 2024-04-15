@@ -9,6 +9,7 @@ export type heroProps = {
     linkTo: string;
     pageName: string;
     title: string;
+    titleStyle?: string;
     blueWord: string;
     buttonName: string;
     chatPosition?: string;

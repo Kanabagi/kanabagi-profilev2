@@ -3,30 +3,33 @@ import WhoAreWe from '@/components/About/who-are-we';
 import Hero from '@/components/hero';
 import SectionHeader from '@/components/section-header';
 import Tagline from '@/components/tagline';
+import HeroServices from '@/components/Services/HeroServices';
 
 export default function AboutPage() {
   return (
     <>
-      <div id="target-section">
-        <Hero
-          bgImg="bg-heroAbout"
-          image="/icons/chat.png"
-          name="About Us"
-          button="Interact With Us"
-          linkTo="#about"
-        >
-          <span>Pioneering Web Development</span>
-          <span className="text-[#00A2DF]">&nbsp;Solutions</span>
-        </Hero>
-        <Tagline />
-        <WhoAreWe />
-        <SectionHeader
-          name="Our Expertise"
-          desc="Discover our expertise, which is where your goals start."
-          position="top-3 translate-x-[100px] md:translate-x-[130px] lg:translate-x-[200px]"
-        />
-        <AboutCard />
-      </div>
+      <section className='min-h-screen flex flex-col items-center justify-center' id='target-section'>
+        <HeroServices
+          bgUrl='bg-heroWorks'
+          pageName='About us'
+          title='Pioneering Web Development Solutions'
+          titleStyle='md:!max-w-xl'
+          blueWord='solutions'
+          buttonName='Interact with us'
+          buttonSize='px-10'
+          linkTo='#about'
+          chatPosition='md:-translate-y-5 md:translate-x-24 -translate-y-6 translate-x-12'
+          subTitle='Your Dream, Our Digital Canvas Painting Your Vision with Innovative Web Solutions.'
+          subDesc='Embrace the art of digital innovation with us. We transform your ideas into dynamic web realities, ensuring your vision shines online."          '
+          quotePosition='translate-x-[310px]' />
+      </section>
+      <WhoAreWe />
+      <SectionHeader
+        name="Our Expertise"
+        desc="Discover our expertise, which is where your goals start."
+        position="top-3 translate-x-[100px] md:translate-x-[130px] lg:translate-x-[150px]"
+      />
+      <AboutCard />
     </>
   );
 }

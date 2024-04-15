@@ -5,7 +5,7 @@ export default function WhoAreWe() {
     <>
       <div
         id="about"
-        className="wrapper relative flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-20 mb-20 scroll-mt-20"
+        className="wrapper min-h-screen relative flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 lg:gap-20 max-md:mb-20 max-md:scroll-mt-20"
       >
         <div>
           <Image
@@ -26,15 +26,15 @@ export default function WhoAreWe() {
                 height={50}
                 className="w-[30px] h-[30px] md:w-[40px] md:h-[40px] lg:w-[50px] lg:h-[50px]"
               />
-              <span className="text-base md:text-lg text-[32px] font-medium text-[#6B7280]">
+              <span className="text-base md:text-[20px] text-[32px] font-medium text-[#6B7280]">
                 Who Are We
               </span>
             </div>
-            <div className="text-3xl md:text-4xl lg:text-[48px] font-semibold text-[#020617]">
+            <div className="text-[24px] md:text-[32px] font-semibold text-[#020617] tracking-wide max-w-sm md:max-w-lg">
               Your Partners in Digital Evolution
             </div>
             <div className="flex flex-col gap-10 max-w-[560px] lg:max-w-[860px] border-t border-[#6B7280] pt-8 text-sm md:text-base lg:text-[20px] text-[#6B7280]">
-              <p>
+              <p className='leading-relaxed'>
                 Your Partners in Digital Evolution" signifies our commitment to
                 being more than just service providers; we're collaborators in
                 your journey towards digital success. At Kanabagi, we believe in
@@ -43,7 +43,7 @@ export default function WhoAreWe() {
                 attention, we work alongside you to navigate the ever-evolving
                 digital landscape.
               </p>
-              <p>
+              <p className='leading-relaxed'>
                 Whether it's website development or UI/UX design, we're here to
                 turn your aspirations into achievements. Let's embark on this
                 transformative journey together, as your dedicated partners in

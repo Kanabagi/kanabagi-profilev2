@@ -9,7 +9,7 @@ import { Separator } from '../ui/separator'
 
 
 
-const HeroServices = ({ bgUrl, linkTo, pageName, title, buttonName, chatPosition, buttonSize, blueWord, subTitle, subDesc, quotePosition }: heroProps) => {
+const HeroServices = ({ bgUrl, linkTo, pageName, title, buttonName, chatPosition, buttonSize, blueWord, subTitle, subDesc, quotePosition, titleStyle }: heroProps) => {
     const specialWordStyle = {
         color: '#00a2df',
     };
@@ -26,7 +26,7 @@ const HeroServices = ({ bgUrl, linkTo, pageName, title, buttonName, chatPosition
                             <Image src="/icons/chat.png" alt='' width={30} height={30} />
                             <span className='text-gray-300 text-[18px] md:text-[20px] font-medium'>{pageName}</span>
                         </div>
-                        <h1 className='text-gray-50 text-[32px] md:text-[48px] font-semibold max-w-md md:max-w-lg text-center'>
+                        <h1 className={`text-gray-50 text-[28px] sm:text-[32px] md:text-[48px] font-semibold max-w-md md:max-w-lg text-center ${titleStyle}`}>
                             {title.split(" ").map((word, index) => {
                                 if (word.toLowerCase() === blueWord) {
                                     return (
@@ -46,7 +46,7 @@ const HeroServices = ({ bgUrl, linkTo, pageName, title, buttonName, chatPosition
                         </h1>
                     </div>
 
-                    <Button className={`relative group bg-transparent h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df] ${buttonSize}`} size="lg">
+                    <Button className={`relative z-10 group bg-transparent h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df] ${buttonSize}`} size="lg">
                         <Link href={linkTo} className='group-hover:-translate-x-4 transition-all duration-500'>
                             {buttonName}
                         </Link>

@@ -16,7 +16,7 @@ const page = () => {
         chatPosition='-translate-y-7 md:translate-x-2 translate-x-7'
         subTitle='Crafting Digital Destinies Web Development and UI/UX Design, Tailored to You'
         subDesc='We customize web development and UI/UX design to fit your needs perfectly, ensuring your online presence stands out and resonates with your audience.'
-        quotePosition='translate-x-[320px]'/>
+        quotePosition='translate-x-[300px]'/>
     </section>
   )
 }

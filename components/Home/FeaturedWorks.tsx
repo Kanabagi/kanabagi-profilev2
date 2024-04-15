@@ -11,8 +11,8 @@ const FeaturedWorks = () => {
     <section className='min-h-screen md:pt-20 flex flex-col justify-items-center'>
       <div className='wrapper flex flex-col justify-center items-center md:gap-4 gap-6'>
         <div className='relative flex flex-col gap-2 items-center'>
-          <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide'>
-            FEATURED WORKS
+          <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide capitalize'>
+            Featured Works
           </h1>
           <p className='text-[#6B7280] max-w-sm sm:max-w-lg md:max-w-2xl text-center max-md:text-[16px]'>
             Our diverse portfolio showcases our ability to deliver exceptional website solutions across various domains. Here are some highlights:

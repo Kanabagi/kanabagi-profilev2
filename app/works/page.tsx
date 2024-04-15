@@ -16,7 +16,7 @@ const page = () => {
         subTitle='Transforming Ideas into Experiences
         Innovative Web Solutions, Beautifully Designed'
         subDesc='Discover digital transformation through our innovative web solutions and beautifully crafted UI/UX interfaces, seamlessly merging technology and design to create captivating online experiences.'
-        quotePosition='translate-x-[300px]' />
+        quotePosition='translate-x-[320px]' />
     </section>
   )
 }

@@ -48,6 +48,7 @@ export default function ContactForm() {
           <Link
             href="https://maps.app.goo.gl/21LCzdjhva1SnKzt8"
             className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
+            target='blank'
           >
             Jl. Jiwa Besar No. 27, Kota tasikmalaya
           </Link>
@@ -59,6 +60,7 @@ export default function ContactForm() {
           <Link
             href="https://api.whatsapp.com/send/?phone=6289518706845&text&type=phone_number&app_absent=0"
             className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
+            target='blank'
           >
             +6289518706845
           </Link>
@@ -70,6 +72,7 @@ export default function ContactForm() {
           <Link
             href="mailto:kanabagigroup@gmail.com"
             className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
+            target='blank'
           >
             kanabagigroup@gmail.com
           </Link>

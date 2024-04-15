@@ -8,12 +8,12 @@ export default function AboutCard() {
         {about[0].cardData.map((item, index) => (
           <div
             key={index}
-            className="group relative flex flex-col border border-black/20 rounded-lg px-8 py-14 h-[360px] w-full md:w-1/2  lg:h-[560px] lg:w-[460px] gap-4 text-black/20 cursor-pointer hover:border-[#00A2DF] hover:bg-[#00A2DF] hover:scale-95 transition-all duration-300 ease-in-out"
+            className="group relative flex flex-col border border-black/20 rounded-lg px-8 py-14 h-[420px] w-full md:w-1/2  lg:h-[560px] lg:w-[460px] gap-4 text-black/20 cursor-pointer hover:border-[#00A2DF] hover:bg-[#00A2DF] hover:scale-95 transition-all duration-300 ease-in-out"
           >
-            <div className="text-xl lg:text-[30px] font-medium group-hover:text-white">
+            <div className="text-xl md:text-[24px] font-medium group-hover:text-white">
               {item.name}
             </div>
-            <div className="text-xs md:text-sm lg:text-[16px] group-hover:text-white/90">
+            <div className="text-[16px] lg:text-[18px] group-hover:text-white/90 leading-relaxed max-md:max-w-md">
               {item.desc}
             </div>
             <Image

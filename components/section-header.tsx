@@ -12,7 +12,7 @@ export default function SectionHeader({
   return (
     <>
       <div className="wrapper relative flex flex-col items-center lg:gap-4">
-        <h1 className="font-bold text-2xl md:text-3xl lg:text-[48px] tracking-wide">
+        <h1 className="font-bold text-[24px] md:text-[32px] tracking-wide">
           {name}
         </h1>
         <p className="text-[#6B7280] max-w-[600px] text-center text-sm md:text-base lg:text-[20px]">

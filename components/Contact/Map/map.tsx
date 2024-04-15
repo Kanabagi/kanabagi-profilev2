@@ -12,7 +12,7 @@ export default function Map() {
       center={position}
       zoom={13}
       scrollWheelZoom={true}
-      className="h-full"
+      className="h-full rounded-[12px]"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

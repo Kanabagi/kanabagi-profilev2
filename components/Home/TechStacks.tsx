@@ -13,7 +13,7 @@ const TechStacks = () => {
             <div className='wrapper flex flex-col items-center justify-center gap-6 z-10'>
                 <div className='relative flex flex-col gap-2 items-center'>
                     <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide'>
-                        TECH STACKS
+                        Tech Stacks
                     </h1>
                     <p className='text-gray-400 max-w-md sm:max-w-xl md:max-w-4xl text-center max-md:text-[16px]'>
                         From coding languages to website, these resources drive our innovation and efficiency, ensuring we deliver top-quality solutions for our clients while keeping pace with industry advancements.
