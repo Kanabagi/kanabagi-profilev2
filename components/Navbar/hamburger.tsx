@@ -68,12 +68,12 @@ export default function Hamburger() {
         ></div>
       </button>
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-[#2E3192] z-40 flex flex-col justify-between items-center py-10 ${
+        className={`fixed top-0 left-0 w-full min-h-screen bg-[#2E3192] z-40 flex flex-col justify-between items-center py-10 ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div
-          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center bg-blue-950 w-full h-[100px] -mt-10`}
+          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center bg-blue-950 w-full h-[100px]`}
         >
           Kanabagi.
         </div>
