@@ -19,8 +19,8 @@ const CardHome = ({ works }: { works: homeCardProps }) => {
 
             <div className='w-full h-full absolute opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-center justify-center gap-4 flex-col z-10 text-white group'>
                 <div className='flex flex-col items-center -mt-12 gap-3'>
-                    <span className='font-medium text-gray-200 -translate-y-10 group-hover:translate-y-0 transition duration-700 opacity-20 ease-in-out group-hover:opacity-100 max-md:text-[14px]'>Website</span>
-                    <h1 className='font-semibold text-[24px] lg:text-[32px] tracking-wide opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-1000 ease-in-out border-t-2 border-b-2'>{works.name}</h1>
+                    <span className='font-medium text-gray-200 -translate-y-10 group-hover:translate-y-0 transition duration-700 opacity-20 ease-in-out group-hover:opacity-100 max-md:text-[14px] select-none'>Website</span>
+                    <h1 className='font-semibold text-[24px] lg:text-[32px] tracking-wide opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-1000 ease-in-out border-t-2 border-b-2 select-none'>{works.name}</h1>
                 </div>
                 {/* <Button className='bg-transparent border-2 translate-y-10 group-hover:translate-y-0 transition duration-700 opacity-20 ease-in-out group-hover:opacity-100 hover:bg-gray-50 hover:text-black p-0' size="lg">
                   <Link href="/works" className='px-6 h-full flex items-center justify-center gap-2'>

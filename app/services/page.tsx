@@ -36,7 +36,7 @@ const page = () => {
         />
 
         <Services />
-        <div className='wrapper max-md:-mt-10'>
+        <div className='wrapper max-md:-mt-40'>
           <ServicesCard style='md:hidden block' cardStyle='shadow-lg' />
         </div>
       </section>
