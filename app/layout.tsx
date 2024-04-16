@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer';
 import ScrollTop from '@/components/ScrollTop';
 import Progressbar from '@/components/ProgressBar';
+import { Suspense } from 'react';
+import Loading from './about/loading';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -27,7 +29,9 @@ export default function RootLayout({
       <body className={`${poppins.variable}`}>
         <Navbar />
         <Progressbar />
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
 
         {/* <ChatUs /> */}
         <ScrollTop />
