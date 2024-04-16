@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Tatamlainan = () => {
     return (
-        <VerticalTimeline animate={true} lineColor='gray'>
+        <VerticalTimeline animate={true} lineColor='gray' className='z-10'>
             <VerticalTimelineElement visible={true}
                 contentStyle={{
                     background: "#f3f4f6",

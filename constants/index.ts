@@ -134,7 +134,7 @@ export const featuredWorksDetail = [
   {
     name: 'Kanabagi Chat',
     imgUrl: '/images/ahmad2.png',
-    link: '',
+    link: '#',
   },
   {
     name: 'Kanabagi Drive',

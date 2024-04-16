@@ -6,28 +6,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Hamburger from './hamburger';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const pathname = usePathname();
   const showNavbar = useScrollPosition('target-section');
 
   return (
-    <div
-      className={`fixed top-0 z-[99] w-full transition-colors duration-1000 ease-in-out ${
-        showNavbar && 'bg-[#2e3192]'
-      }`}
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{
+        opacity: 1, y: 0,
+        transition: {
+          delay: 0.2,
+          duration: 0.5,
+          ease: 'circIn'
+        }
+      }} viewport={{ once: true }}
+      className={`fixed top-0 z-[99] w-full transition-colors duration-1000 ease-in-out ${showNavbar && 'bg-[#2e3192]'
+        }`}
     >
       <div
-        className={`wrapper flex justify-between items-center ${
-          showNavbar && 'py-4'
-        }`}
+        className={`wrapper flex justify-between items-center ${showNavbar && 'py-4'
+          }`}
       >
         <div className="flex gap-8">
           <Link
             href="/"
-            className={`font-medium flex items-center text-gray-50 ${
-              showNavbar ? 'text-[24px]' : 'text-[28px] md:text-[32px]'
-            }`}
+            className={`font-medium flex items-center text-gray-50 ${showNavbar ? 'text-[24px]' : 'text-[28px] md:text-[32px]'
+              }`}
           >
             Kanabagi.
           </Link>
@@ -41,28 +48,34 @@ export default function Navbar() {
               >
                 {showNavbar ? (
                   <div
-                    className={`${
-                      pathname === item.path && 'text-white font-medium'
-                    } text-gray-400 hover:text-white transition-all duration-200 ease-in-out`}
+                    className={`${pathname === item.path && 'text-white font-medium'
+                      } text-gray-400 hover:text-white transition-all duration-200 ease-in-out`}
                   >
                     {item.name}
                   </div>
                 ) : (
                   <>
-                    <div
-                      className={`border-2 rounded-full border-[#F8FAFC] ${
-                        pathname === item.path && 'bg-[#F8FAFC]'
-                      } p-2 group-hover:-translate-y-3 transition-transform duration-300 ease-in-out`}
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{
+                        opacity: 1, y: 0,
+                        transition: {
+                          delay: 0.8,
+                          duration: 0.5,
+                          ease: 'linear'
+                        }
+                      }} viewport={{ once: true }}
+                      className={`border-2 rounded-full border-[#F8FAFC] ${pathname === item.path && 'bg-[#F8FAFC]'
+                        } p-2 group-hover:-translate-y-3 transition-transform duration-300 ease-in-out`}
                     >
                       <item.Icon
                         size={25}
-                        className={`${
-                          pathname === item.path
-                            ? 'text-[#2E3192]'
-                            : 'text-[#F8FAFC]'
-                        }`}
+                        className={`${pathname === item.path
+                          ? 'text-[#2E3192]'
+                          : 'text-[#F8FAFC]'
+                          }`}
                       />
-                    </div>
+                    </motion.div>
                     <div className="absolute text-[#F8FAFC] opacity-0 group-hover:opacity-100 group-hover:translate-y-6 transition-all duration-200 ease-in-out">
                       {item.name}
                     </div>
@@ -72,7 +85,17 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-        <div className="lg:flex hidden items-center gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{
+            opacity: 1, x: 0,
+            transition: {
+              delay: 1,
+              duration: 0.5,
+              ease: 'anticipate'
+            }
+          }} viewport={{ once: true }}
+          className="lg:flex hidden items-center gap-8">
           {nav[1].navSocial?.map((item, index) => (
             <Link
               key={index}
@@ -89,9 +112,9 @@ export default function Navbar() {
               />
             </Link>
           ))}
-        </div>
+        </motion.div>
         <Hamburger />
       </div>
-    </div>
+    </motion.div>
   );
 }

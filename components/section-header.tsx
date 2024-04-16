@@ -4,14 +4,16 @@ export default function SectionHeader({
   name,
   desc,
   position,
+  style,
 }: {
   name: string;
   desc: string;
   position: string;
+  style?: string
 }) {
   return (
     <>
-      <div className="wrapper relative flex flex-col items-center gap-2">
+      <div className={`wrapper relative flex flex-col items-center gap-2 ${style}`}>
         <h1 className="font-bold text-[24px] md:text-[32px] tracking-wide">
           {name}
         </h1>

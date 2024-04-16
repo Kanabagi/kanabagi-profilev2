@@ -70,6 +70,9 @@ export default function ContactForm() {
       noValidate
     >
       <ContactHeader />
+      {errors.name && (
+        <span className="text-red-500">{errors.name.message}</span>
+      )}
       <input
         type="text"
         id="name"
@@ -78,10 +81,10 @@ export default function ContactForm() {
         placeholder="Name*"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
-      {errors.name && (
-        <span className="text-red-500">{errors.name.message}</span>
-      )}
 
+      {errors.email && (
+        <span className="text-red-500">{errors.email.message}</span>
+      )}
       <input
         type="email"
         id="email"
@@ -98,10 +101,10 @@ export default function ContactForm() {
         placeholder="Email*"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
-      {errors.email && (
-        <span className="text-red-500">{errors.email.message}</span>
-      )}
 
+      {errors.phone && (
+        <span className="text-red-500">{errors.phone.message}</span>
+      )}
       <input
         type="text"
         id="phone"
@@ -117,9 +120,7 @@ export default function ContactForm() {
         aria-invalid={errors.phone ? 'true' : 'false'}
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
-      {errors.phone && (
-        <span className="text-red-500">{errors.phone.message}</span>
-      )}
+
       <input
         type="text"
         id="company"
@@ -128,6 +129,10 @@ export default function ContactForm() {
         name="company"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
+
+      {errors.message && (
+        <span className="text-red-500">{errors.message.message}</span>
+      )}
       <textarea
         rows={5}
         id="message"
@@ -136,9 +141,6 @@ export default function ContactForm() {
         name="message"
         className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
       />
-      {errors.message && (
-        <span className="text-red-500">{errors.message.message}</span>
-      )}
       {showButton && (
         <button
           type="submit"

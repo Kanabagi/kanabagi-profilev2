@@ -6,7 +6,8 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 
 const CardHome = ({ works }: { works: homeCardProps }) => {
     return (
-        <div className='group relative flex items-center justify-items-center shadow-md rounded-[12px] overflow-hidden' key={works.name}>
+        <div
+            className='group relative flex items-center justify-items-center shadow-md rounded-[12px] overflow-hidden' key={works.name}>
             <Image
                 src={works.imgUrl}
                 alt=''
