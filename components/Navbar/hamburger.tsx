@@ -73,7 +73,7 @@ export default function Hamburger() {
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div
-          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center bg-blue-950 w-full h-[100px]`}
+          className={`text-[#F8FAFC] text-3xl font-medium flex items-center justify-center bg-blue-950 w-full h-[100px] -mt-10`}
         >
           Kanabagi.
         </div>
@@ -102,7 +102,7 @@ export default function Hamburger() {
             <Link
               key={index}
               href={item.path}
-              className={`group relative h-[35px] w-[35px] hover:scale-95 transition-transform duration-300 ease-in-out ${
+              className={`group relative -mt-20 h-[35px] w-[35px] hover:scale-95 transition-transform duration-300 ease-in-out ${
                 isOpen ? 'translate-x-0' : 'translate-x-20'
               } transition-all !duration-1000`}
             >
