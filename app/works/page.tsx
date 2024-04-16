@@ -1,7 +1,10 @@
+"use client"
+
 import SectionHeader from '@/components/section-header'
 import HeroServices from '@/components/Services/HeroServices'
 import WorkingTabs from '@/components/Works/WorkingTabs'
 import React from 'react'
+import { motion } from 'framer-motion';
 
 
 const page = () => {
@@ -28,9 +31,19 @@ const page = () => {
           desc="It is an honor for us to showcase the latest additions to our portfolio, highlighting our team's dedication and expertise in delivering exceptional digital solutions."
           position="top-3 translate-x-[130px] md:translate-x-[180px]" />
 
-        <div className='w-full flex items-center justify-center'>
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.8,
+              duration: 0.5,
+            }
+          }} viewport={{ once: true }}
+          className='w-full flex items-center justify-center'>
           <WorkingTabs />
-        </div>
+        </motion.div>
       </section>
     </>
   )

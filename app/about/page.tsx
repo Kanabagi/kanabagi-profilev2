@@ -1,12 +1,11 @@
 import AboutCard from '@/components/About/card';
 import WhoAreWe from '@/components/About/who-are-we';
-import Hero from '@/components/hero';
 import SectionHeader from '@/components/section-header';
-import Tagline from '@/components/tagline';
 import HeroServices from '@/components/Services/HeroServices';
 import SimpleContact from '@/components/Services/SimpleContact';
 
 export default function AboutPage() {
+
   return (
     <>
       <section className='min-h-screen flex flex-col items-center justify-center' id='target-section'>

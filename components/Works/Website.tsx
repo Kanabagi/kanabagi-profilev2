@@ -1,7 +1,9 @@
+"use client"
+
 import Image from 'next/image';
 import React from 'react'
-import { Button } from '../ui/button';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface workProps {
     name: string;
@@ -12,7 +14,18 @@ interface workProps {
 const Website = ({ works }: { works: workProps }) => {
     return (
         <div className='group flex items-center justify-center'>
-            <div className='relative flex flex-col rounded-[12px] group-hover:shadow-md group-hover:bg-gray-100 transtiion duration-200 overflow-hidden'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        delay: 0.,
+                        duration: 0.5,
+                        ease: 'easeInOut'
+                    }
+                }} viewport={{ once: true }}
+                className='relative flex flex-col rounded-[12px] group-hover:shadow-md group-hover:bg-gray-100 transtiion duration-200 overflow-hidden'>
                 <div className='relative overflow-hidden flex items-center justify-center w-full'>
                     <Image src={works.imgUrl} alt='' width={800} height={800} className='rounded-[12px]' />
                     <Link
@@ -42,7 +55,7 @@ const Website = ({ works }: { works: workProps }) => {
                 </div>
 
                 <Image src="/icons/settings.png" alt='' width={200} height={200} className='absolute bottom-0 right-0 opacity-20 translate-x-10 translate-y-20' />
-            </div>
+            </motion.div>
         </div>
     )
 }

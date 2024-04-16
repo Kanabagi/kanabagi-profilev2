@@ -1,13 +1,26 @@
+"use client"
+
 import { footer, nav } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <div className="bg-[#2E3192] flex flex-col pt-4">
       <div className="wrapper flex flex-col gap-4 md:flex-row md:justify-between pb-10">
-        <div className="flex flex-col gap-2">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{
+            opacity: 1, x: 1,
+            transition: {
+              delay: 0.4,
+              duration: 0.5,
+              ease: 'linear'
+            }
+          }} viewport={{ once: true }}
+          className="flex flex-col gap-2">
           <Link
             href="/"
             className="relative h-[80px] w-[215px] md:h-[60px] md:w-[195px]"
@@ -25,8 +38,18 @@ const Footer = () => {
             creating exceptional online experiences. They specialize in crafting
             dynamic and user-friendly websites customized for each client.
           </p>
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{
+            opacity: 1, x: 1,
+            transition: {
+              delay: 0.6,
+              duration: 0.5,
+              ease: 'linear'
+            }
+          }} viewport={{ once: true }}
+          className="flex flex-col gap-2">
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Contact Us
           </div>
@@ -44,8 +67,18 @@ const Footer = () => {
               </Link>
             </div>
           ))}
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{
+            opacity: 1, x: 1,
+            transition: {
+              delay: 0.8,
+              duration: 0.5,
+              ease: 'linear'
+            }
+          }} viewport={{ once: true }}
+          className="flex flex-col gap-2">
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Quick Links
           </div>
@@ -62,8 +95,18 @@ const Footer = () => {
               </Link>
             </div>
           ))}
-        </div>
-        <div className="flex flex-col gap-2">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{
+            opacity: 1, x: 1,
+            transition: {
+              delay: 1,
+              duration: 0.5,
+              ease: 'linear'
+            }
+          }} viewport={{ once: true }}
+          className="flex flex-col gap-2">
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Connect With Us
           </div>
@@ -85,7 +128,7 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="wrapper border-t text-[#F8FAFC] flex justify-center items-center">
         © 2024&nbsp;

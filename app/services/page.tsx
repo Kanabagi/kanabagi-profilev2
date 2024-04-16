@@ -1,3 +1,5 @@
+"use client"
+
 import CarouselTechStacks from '@/components/Home/CarouselTechStacks'
 import SectionHeader from '@/components/section-header'
 import HeroServices from '@/components/Services/HeroServices'
@@ -6,6 +8,7 @@ import ServicesCard from '@/components/Services/ServicesCard'
 import SimpleContact from '@/components/Services/SimpleContact'
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion';
 
 const page = () => {
   return (
@@ -42,7 +45,17 @@ const page = () => {
         <SimpleContact />
 
         <div className='wrapper flex flex-col gap-4'>
-          <div className='relative flex flex-col gap-2 items-center'>
+          <motion.div
+            initial={{ opacity: 0, scale: 1.2 }}
+            whileInView={{
+              opacity: 1,
+              scale:1,
+              transition: {
+                delay: 0.8,
+                duration: 0.5,
+              }
+            }} viewport={{ once: true }}
+            className='relative flex flex-col gap-2 items-center'>
             <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide'>
               Tech Stacks
             </h1>
@@ -55,9 +68,21 @@ const page = () => {
               width={30}
               height={30}
               className='absolute top-0 translate-x-[110px] md:translate-x-[140px] -translate-y-3' />
-          </div>
+          </motion.div>
 
-          <CarouselTechStacks />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                delay: 0.8,
+                duration: 0.5,
+                ease: 'easeInOut'
+              }
+            }} viewport={{ once: true }}>
+            <CarouselTechStacks />
+          </motion.div>
         </div>
 
       </section>

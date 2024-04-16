@@ -76,7 +76,7 @@ export default function Navbar() {
                           }`}
                       />
                     </motion.div>
-                    <div className="absolute text-[#F8FAFC] opacity-0 group-hover:opacity-100 group-hover:translate-y-6 transition-all duration-200 ease-in-out">
+                    <div className="absolute text-[#F8FAFC] opacity-0 group-hover:opacity-100 group-hover:translate-y-10 translate-x-5 transition-all duration-200 ease-in-out">
                       {item.name}
                     </div>
                   </>
