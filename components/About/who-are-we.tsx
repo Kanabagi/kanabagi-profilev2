@@ -43,7 +43,7 @@ export default function WhoAreWe() {
         <div>
           <div className="flex flex-col gap-4">
             <motion.div
-              initial={{ opacity: 0, y: -30 }}
+              initial={{ opacity: 0, y: -20 }}
               whileInView={{
                 opacity: 1,
                 y: 0,
@@ -66,7 +66,7 @@ export default function WhoAreWe() {
               </span>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{
                 opacity: 1,
                 x: 0,
@@ -80,7 +80,7 @@ export default function WhoAreWe() {
               Your Partners in Digital Evolution
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{
                 opacity: 1,
                 y: 0,

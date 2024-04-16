@@ -46,10 +46,10 @@ const page = () => {
 
         <div className='wrapper flex flex-col gap-4'>
           <motion.div
-            initial={{ opacity: 0, scale: 1.2 }}
+            initial={{ opacity: 0, scale: 1.1 }}
             whileInView={{
               opacity: 1,
-              scale:1,
+              scale: 1,
               transition: {
                 delay: 0.8,
                 duration: 0.5,
