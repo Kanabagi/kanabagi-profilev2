@@ -10,6 +10,7 @@ export default function Home() {
 
   return (
     <main className="relative" id="top-home">
+
       <HeroSection />
       <AfterHesec />
       <FeaturedWorks />

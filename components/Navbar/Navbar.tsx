@@ -23,7 +23,7 @@ export default function Navbar() {
           ease: 'circIn'
         }
       }} viewport={{ once: true }}
-      className={`fixed top-0 z-[99] w-full transition-colors duration-1000 ease-in-out ${showNavbar && 'bg-[#2e3192]'
+      className={`fixed top-0 z-[90] w-full transition-colors duration-1000 ease-in-out ${showNavbar && 'bg-[#2e3192]'
         }`}
     >
       <div

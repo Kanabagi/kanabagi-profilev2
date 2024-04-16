@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer';
 import ScrollTop from '@/components/ScrollTop';
+import Progressbar from '@/components/ProgressBar';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={`${poppins.variable}`}>
         <Navbar />
+        <Progressbar />
         {children}
 
         {/* <ChatUs /> */}
