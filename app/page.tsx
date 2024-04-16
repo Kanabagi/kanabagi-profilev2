@@ -5,7 +5,6 @@ import FeaturedWorks from '@/components/Home/FeaturedWorks';
 import HeroSection from '@/components/Home/HeroSection';
 import ServicesHome from '@/components/Home/ServicesHome';
 import TechStacks from '@/components/Home/TechStacks';
-import ScrollTop from '@/components/ScrollTop';
 
 export default function Home() {
 

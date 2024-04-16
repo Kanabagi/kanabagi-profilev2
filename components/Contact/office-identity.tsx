@@ -8,7 +8,7 @@ export default function OfficeIdentity() {
           Address:
         </div>
         <Link
-          href="https://maps.app.goo.gl/21LCzdjhva1SnKzt8"
+          href="https://maps.app.goo.gl/bTXdJVdVkGGhEVFW6"
           className="text-gray-600 text-xs xl:text-base group-hover:text-black group-hover:underline"
           target="blank"
         >

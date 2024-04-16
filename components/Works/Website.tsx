@@ -27,7 +27,7 @@ const Website = ({ works }: { works: workProps }) => {
                 }} viewport={{ once: true }}
                 className='relative flex flex-col rounded-[12px] group-hover:shadow-md group-hover:bg-gray-100 transtiion duration-200 overflow-hidden'>
                 <div className='relative overflow-hidden flex items-center justify-center w-full'>
-                    <Image src={works.imgUrl} alt='' width={800} height={800} className='rounded-[12px]' />
+                    <Image src={works.imgUrl} alt='' width={800} height={800} className='rounded-[12px] w-[300] h-[300px] sm:w-[650px] sm:h-[450px] md:w-[500px] md:h-[300px] lg:w-[800px] lg:h-[400px] object-cover' />
                     <Link
                         href={works.link}
                         target='blank'

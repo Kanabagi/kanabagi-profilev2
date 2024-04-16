@@ -15,7 +15,7 @@ export default function AboutCard() {
               opacity: 1,
               scale: 1,
               transition: {
-                delay: 0.8,
+                delay: 0.5,
                 duration: 0.5,
                 ease: 'easeInOut'
               }

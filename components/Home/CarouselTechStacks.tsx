@@ -36,7 +36,7 @@ const CarouselTechStacks = () => {
                             <div className='w-4 h-4 rounded-full bg-[#27C93F]' />
                         </div>
 
-                        <div className='absolute top-10 w-full px-4 max-md:-translate-x-'>
+                        <div className='absolute top-10 w-full px-4 max-md:-translate-x-2'>
                             <Separator className=' border-2 border-[#00a2df]' />
                         </div>
                     </CarouselItem>

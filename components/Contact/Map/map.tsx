@@ -5,7 +5,7 @@ import L from 'leaflet';
 import Link from 'next/link';
 
 export default function Map() {
-  const position: LatLngTuple = [-7.33157872591434, 108.21178015655543];
+  const position: LatLngTuple = [-7.331486, 108.211688];
   const icon = L.icon({ iconUrl: '/icons/marker-icon.png' });
   return (
     <MapContainer

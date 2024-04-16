@@ -13,7 +13,7 @@ const CardHome = ({ works }: { works: homeCardProps }) => {
                 alt=''
                 width={800}
                 height={600}
-                className='rounded-[12px] ' />
+                className='rounded-[12px] w-[300] h-[250px] sm:w-[650px] sm:h-[450px] md:w-[500px] md:h-[300px] lg:w-[800px] lg:h-[400px] object-cover' />
 
             <div className='w-full h-full bg-gray-700 absolute opacity-0 group-hover:opacity-80 transition-all duration-400 rounded-[12px]' />
 

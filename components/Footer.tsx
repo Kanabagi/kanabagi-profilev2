@@ -15,7 +15,7 @@ const Footer = () => {
           whileInView={{
             opacity: 1, x: 1,
             transition: {
-              delay: 0.4,
+              delay: 0.2,
               duration: 0.5,
               ease: 'linear'
             }
@@ -44,7 +44,7 @@ const Footer = () => {
           whileInView={{
             opacity: 1, x: 1,
             transition: {
-              delay: 0.6,
+              delay: 0.3,
               duration: 0.5,
               ease: 'linear'
             }
@@ -73,7 +73,7 @@ const Footer = () => {
           whileInView={{
             opacity: 1, x: 1,
             transition: {
-              delay: 0.8,
+              delay: 0.4,
               duration: 0.5,
               ease: 'linear'
             }
@@ -101,7 +101,7 @@ const Footer = () => {
           whileInView={{
             opacity: 1, x: 1,
             transition: {
-              delay: 1,
+              delay: 0.5,
               duration: 0.5,
               ease: 'linear'
             }
