@@ -77,7 +77,7 @@ export default function Hamburger() {
         >
           Kanabagi.
         </div>
-        <div className="flex flex-col items-center gap-4 z-10">
+        <div className="flex flex-col items-center gap-4 z-10 -mt-20">
           {nav[0].navMenu?.map((item, index) => (
             <Link
               key={index}
