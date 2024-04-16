@@ -28,7 +28,7 @@ const page = () => {
           quotePosition='translate-x-[300px]' />
       </section>
 
-      <section className='min-h-screen flex flex-col justify-center items-center scroll-mt-10 gap-6 pt-10 max-md:pb-10' id='ourservices'>
+      <section className='min-h-screen flex flex-col justify-center items-center scroll-mt-10 gap-6 md:pt-10 max-md:pb-10' id='ourservices'>
         <SectionHeader
           name="Our Services"
           desc="We specialize in crafting exceptional digital experiences through our comprehensive web development and UI/UX design services."
@@ -36,7 +36,7 @@ const page = () => {
         />
 
         <Services />
-        <div className='wrapper max-md:-mt-40'>
+        <div className='wrapper'>
           <ServicesCard style='md:hidden block' cardStyle='shadow-lg' />
         </div>
       </section>
