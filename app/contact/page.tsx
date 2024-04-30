@@ -33,7 +33,7 @@ export default function ContactPage() {
               ease: 'linear'
             }
           }} viewport={{ once: true }}
-          className="md:w-1/2 w-full border bg-slate-300 h-[480px] md:h-full z-10 rounded-[12px]">
+          className="md:w-1/2 w-full border bg-slate-300 h-[350px] md:h-full z-10 rounded-[12px]">
           <Map />
         </motion.div>
       </div>

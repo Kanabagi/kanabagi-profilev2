@@ -39,9 +39,9 @@ export const nav = [
   },
   {
     navSocial: [
-      { name: 'Facebook', path: '/', img: '/icons/facebook.png' },
-      { name: 'Instagram', path: '/', img: '/icons/instagram.png' },
-      { name: 'Linkedin', path: '/', img: '/icons/linkedin.png' },
+      { name: 'Facebook', path: '', img: '/icons/facebook.png' },
+      { name: 'Instagram', path: '', img: '/icons/instagram.png' },
+      { name: 'Linkedin', path: '', img: '/icons/linkedin.png' },
     ],
   },
 ];
@@ -51,7 +51,7 @@ export const footer = [
     contact: [
       {
         name: 'Jl. Jiwa Besar No.27, Kota Tasikmalaya',
-        url: 'https://maps.app.goo.gl/21LCzdjhva1SnKzt8',
+        url: 'https://maps.app.goo.gl/bTXdJVdVkGGhEVFW6',
       },
       {
         name: 'kanabagigroup@gmail.com',
@@ -74,7 +74,7 @@ export const featuredWorksHome = [
   {
     name: 'Kanabagi Chat',
     imgUrl: '/images/ahmad2.png',
-    link: '/works',
+    link: '',
   },
   {
     name: 'Kanabagi Drive',
