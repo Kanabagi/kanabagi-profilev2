@@ -58,9 +58,11 @@ const SimpleContact = () => {
               ease: 'linear'
             }
           }} viewport={{ once: true }}>
-          <Button className='h-[54px] bg-gray-50 rounded-full text-gray-700 px-10 hover:bg-[#00a2df] hover:text-gray-50 max-md:w-full'>
-            <Link href="/contact">Connect with us</Link>
-          </Button>
+          <Link href="/contact">
+            <Button className='h-[54px] bg-gray-50 rounded-full text-gray-700 px-10 hover:bg-[#00a2df] hover:text-gray-50 max-md:w-full'>
+              Connect with us
+            </Button>
+          </Link>
         </motion.div>
       </div>
 

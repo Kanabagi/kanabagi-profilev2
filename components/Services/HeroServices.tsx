@@ -78,12 +78,12 @@ const HeroServices = ({ bgUrl, linkTo, pageName, title, buttonName, chatPosition
                                 ease: 'linear'
                             }
                         }} viewport={{ once: true }}>
-                        <Button className={`relative z-10 group bg-transparent h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df] ${buttonSize}`} size="lg">
-                            <Link href={linkTo} className='group-hover:-translate-x-4 transition-all duration-500'>
-                                {buttonName}
-                            </Link>
-                            <FaArrowRight className='absolute right-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-500' />
-                        </Button>
+                        <Link href={linkTo} className='group transition-all duration-500 relative'>
+                            <Button className={`z-10 bg-transparent h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df] ${buttonSize}`} size="lg">
+                                <span className='group-hover:-translate-x-4 transition-all duration-500'>{buttonName}</span>
+                            </Button>
+                            <FaArrowRight className='absolute right-10 top-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-500 text-gray-50' />
+                        </Link>
                     </motion.div>
                 </div>
             </div>

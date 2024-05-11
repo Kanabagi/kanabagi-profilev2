@@ -19,15 +19,7 @@ const Services = () => {
             <div className='flex w-full'>
                 <motion.div
                     style={{ y: img1, backgroundImage: 'url(/images/bg-services3.jpg)' }}
-                    initial={{ opacity: 0, x: 10 }}
-                    whileInView={{
-                        opacity: 1,
-                        x: 0,
-                        transition: {
-                            delay: 0.8,
-                            duration: 0.5
-                        }
-                    }} viewport={{ once: true }}
+                    viewport={{ once: true }}
                     className='flex-1 h-[250px] bg-cover bg-center'
                 />
                 <div className='flex-1 flex'>
@@ -38,7 +30,7 @@ const Services = () => {
                                 opacity: 1,
                                 x: 0,
                                 transition: {
-                                    delay: 0.9,
+                                    delay: 0.2,
                                     duration: 0.5,
                                 }
                             }} viewport={{ once: true }}
@@ -54,7 +46,7 @@ const Services = () => {
                                 opacity: 1,
                                 x: 0,
                                 transition: {
-                                    delay: 1,
+                                    delay: 0.2,
                                     duration: 0.5,
                                 }
                             }} viewport={{ once: true }}
@@ -74,7 +66,7 @@ const Services = () => {
                                 opacity: 1,
                                 x: 0,
                                 transition: {
-                                    delay: 0.9,
+                                    delay: 0.4,
                                     duration: 0.5,
                                 }
                             }} viewport={{ once: true }}
@@ -91,7 +83,7 @@ const Services = () => {
                                 opacity: 1,
                                 x: 0,
                                 transition: {
-                                    delay: 1,
+                                    delay: 0.4,
                                     duration: 0.5,
                                 }
                             }} viewport={{ once: true }}
@@ -102,15 +94,7 @@ const Services = () => {
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{
-                        opacity: 1,
-                        x: 0,
-                        transition: {
-                            delay: 0.8,
-                            duration: 0.5,
-                        }
-                    }} viewport={{ once: true }} style={{ y: img2, backgroundImage: 'url(/images/bg-services2.jpg)' }}
+                    viewport={{ once: true }} style={{ y: img2, backgroundImage: 'url(/images/bg-services2.jpg)' }}
                     className='flex-1 h-[250px] bg-cover bg-center' />
             </div>
         </div>

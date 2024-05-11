@@ -83,7 +83,7 @@ const AfterHesec = () => {
                             ease: 'easeInOut'
                         }
                     }} viewport={{ once: true }}
-                    className='z-10 max-w-xl text-center text-[20px] sm:text-[24px] font-medium'>
+                    className='z-10 max-w-md text-center text-[20px] sm:text-[24px] font-medium'>
                     Your happiness, our achievement
                     Your joy, our Inspiration
 
@@ -98,7 +98,7 @@ const AfterHesec = () => {
                             ease: 'easeInOut',
                         }
                     }} viewport={{ once: true }}
-                    className='absolute top-[65px] translate-x-[320px] hidden md:block'
+                    className='absolute top-[65px] translate-x-[240px] hidden md:block'
                 >
                     <Image src="/icons/quote.png" alt='' width={50} height={50} className='' />
                 </motion.div>

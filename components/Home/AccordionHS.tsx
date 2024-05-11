@@ -20,7 +20,7 @@ const AccordionHS = () => {
                 <AccordionContent className='text-gray-300 tracking-wide leading-relaxed'>
                     Experience seamless web development tailored to your vision.
                     Let us handle the complexities while you focus on your business.
-                    Welcome to innovation, reliability, and digital empowerment.s
+                    Welcome to innovation, reliability, and digital empowerment.
                 </AccordionContent>
             </AccordionItem>
         </Accordion>

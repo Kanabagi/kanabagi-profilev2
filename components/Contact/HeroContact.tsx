@@ -56,12 +56,12 @@ const HeroContact = () => {
                             ease: 'linear'
                         }
                     }} viewport={{ once: true }}>
-                    <Button className="relative z-10 group bg-transparent px-10 h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df]" size="lg">
-                        <Link href="#contact" className='group-hover:-translate-x-4 transition-all duration-500'>
-                            Contact us
-                        </Link>
-                        <FaArrowRight className='absolute right-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-500' />
-                    </Button>
+                    <Link href="#contact" className='group transition-all duration-500 relative'>
+                        <Button className={`z-10 bg-transparent h-[54px] border-2 border-[#00a2df] rounded-full hover:bg-[#00a2df] px-10`} size="lg">
+                            <span className='group-hover:-translate-x-4 transition-all duration-500'>Contact us</span>
+                        </Button>
+                        <FaArrowRight className='absolute right-10 top-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-500 text-gray-50' />
+                    </Link>
                 </motion.div>
             </div>
         </div>
