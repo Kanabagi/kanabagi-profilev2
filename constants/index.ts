@@ -69,7 +69,7 @@ export const featuredWorksHome = [
   {
     name: 'Portofolio',
     imgUrl: '/images/iki.png',
-    link: 'https://rifky-portfolio.vercel.app/',
+    link: 'http://rifkyalfarez.vercel.app',
   },
   {
     name: 'Kanabagi Chat',
