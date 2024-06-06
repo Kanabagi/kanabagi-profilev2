@@ -1,12 +1,14 @@
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar/Navbar';
+import Progressbar from '@/components/ProgressBar';
+import ScrollTop from '@/components/ScrollTop';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import './globals.css';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer';
-import ScrollTop from '@/components/ScrollTop';
-import Progressbar from '@/components/ProgressBar';
 import { Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Loading from './about/loading';
+import './globals.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -48,6 +50,7 @@ export default function RootLayout({
         {/* <ChatUs /> */}
         <ScrollTop />
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );
