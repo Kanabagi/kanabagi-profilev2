@@ -1,34 +1,46 @@
-"use client"
+import CarouselTechStacks from '@/components/Home/CarouselTechStacks';
+import HeroServices from '@/components/Services/HeroServices';
+import Services from '@/components/Services/Services';
+import ServicesCard from '@/components/Services/ServicesCard';
+import SimpleContact from '@/components/Services/SimpleContact';
+import SectionHeader from '@/components/section-header';
+import { MotionDiv } from '@/framer';
+import Image from 'next/image';
 
-import CarouselTechStacks from '@/components/Home/CarouselTechStacks'
-import SectionHeader from '@/components/section-header'
-import HeroServices from '@/components/Services/HeroServices'
-import Services from '@/components/Services/Services'
-import ServicesCard from '@/components/Services/ServicesCard'
-import SimpleContact from '@/components/Services/SimpleContact'
-import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion';
+export const metadata = {
+  title: 'Services',
+  description: 'Crafting Your Digital Identity',
+  openGraph: {
+    images: '/services/opengraph-image.png',
+  },
+};
 
 const page = () => {
   return (
     <>
-      <section className='min-h-screen flex flex-col items-center justify-center' id='target-section'>
+      <section
+        className="min-h-screen flex flex-col items-center justify-center"
+        id="target-section"
+      >
         <HeroServices
-          bgUrl='bg-heroService'
-          pageName='Services'
-          title='Crafting Your Digital Identity'
-          blueWord='identity'
-          buttonName='Our Services'
-          buttonSize='px-10'
-          linkTo='#ourservices'
-          chatPosition='-translate-y-7 md:translate-x-2 translate-x-7'
-          subTitle='Crafting Digital Destinies Web Development and UI/UX Design, Tailored to You'
-          subDesc='We customize web development and UI/UX design to fit your needs perfectly, ensuring your online presence stands out and resonates with your audience.'
-          quotePosition='translate-x-[300px]' />
+          bgUrl="bg-heroService"
+          pageName="Services"
+          title="Crafting Your Digital Identity"
+          blueWord="identity"
+          buttonName="Our Services"
+          buttonSize="px-10"
+          linkTo="#ourservices"
+          chatPosition="-translate-y-7 md:translate-x-2 translate-x-7"
+          subTitle="Crafting Digital Destinies Web Development and UI/UX Design, Tailored to You"
+          subDesc="We customize web development and UI/UX design to fit your needs perfectly, ensuring your online presence stands out and resonates with your audience."
+          quotePosition="translate-x-[300px]"
+        />
       </section>
 
-      <section className='min-h-screen flex flex-col justify-center items-center scroll-mt-10 gap-6 md:pt-10 max-md:pb-10' id='ourservices'>
+      <section
+        className="min-h-screen flex flex-col justify-center items-center scroll-mt-10 gap-6 md:pt-10 max-md:pb-10"
+        id="ourservices"
+      >
         <SectionHeader
           name="Our Services"
           desc="We specialize in crafting exceptional digital experiences through our comprehensive web development and UI/UX design services."
@@ -36,16 +48,16 @@ const page = () => {
         />
 
         <Services />
-        <div className='wrapper'>
-          <ServicesCard style='md:hidden block' cardStyle='shadow-lg' />
+        <div className="wrapper">
+          <ServicesCard style="md:hidden block" cardStyle="shadow-lg" />
         </div>
       </section>
 
-      <section className='min-h-screen flex flex-col justify-center items-center gap-10'>
+      <section className="min-h-screen flex flex-col justify-center items-center gap-10">
         <SimpleContact />
 
-        <div className='wrapper flex flex-col gap-4'>
-          <motion.div
+        <div className="wrapper flex flex-col gap-4">
+          <MotionDiv
             initial={{ opacity: 0, scale: 1.1 }}
             whileInView={{
               opacity: 1,
@@ -53,24 +65,30 @@ const page = () => {
               transition: {
                 delay: 0.8,
                 duration: 0.5,
-              }
-            }} viewport={{ once: true }}
-            className='relative flex flex-col gap-2 items-center'>
-            <h1 className='font-bold text-[24px] md:text-[32px] tracking-wide'>
+              },
+            }}
+            viewport={{ once: true }}
+            className="relative flex flex-col gap-2 items-center"
+          >
+            <h1 className="font-bold text-[24px] md:text-[32px] tracking-wide">
               Tech Stacks
             </h1>
-            <p className='text-gray-500 max-w-md sm:max-w-xl md:max-w-4xl text-center max-md:text-[16px]'>
-              From coding languages to website, these resources drive our innovation and efficiency, ensuring we deliver top-quality solutions for our clients while keeping pace with industry advancements.
+            <p className="text-gray-500 max-w-md sm:max-w-xl md:max-w-4xl text-center max-md:text-[16px]">
+              From coding languages to website, these resources drive our
+              innovation and efficiency, ensuring we deliver top-quality
+              solutions for our clients while keeping pace with industry
+              advancements.
             </p>
             <Image
               src="/icons/code.png"
-              alt=''
+              alt=""
               width={30}
               height={30}
-              className='absolute top-0 translate-x-[110px] md:translate-x-[140px] -translate-y-3' />
-          </motion.div>
+              className="absolute top-0 translate-x-[110px] md:translate-x-[140px] -translate-y-3"
+            />
+          </MotionDiv>
 
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{
               opacity: 1,
@@ -78,20 +96,19 @@ const page = () => {
               transition: {
                 delay: 0.8,
                 duration: 0.5,
-                ease: 'easeInOut'
-              }
-            }} viewport={{ once: true }}>
+                ease: 'easeInOut',
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <CarouselTechStacks />
-          </motion.div>
+          </MotionDiv>
         </div>
-
       </section>
 
-      <section className='h-[100px]'>
-
-      </section>
+      <section className="h-[100px]"></section>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
