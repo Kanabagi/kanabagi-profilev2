@@ -1,6 +1,7 @@
 import HeroContact from '@/components/Contact/HeroContact';
 import Map from '@/components/Contact/Map';
 import ContactForm from '@/components/Contact/contact-form';
+import GoogleMaps from '@/components/Contact/google-maps';
 import { MotionDiv } from '@/framer';
 
 export const metadata = {
@@ -46,7 +47,8 @@ export default function ContactPage() {
           viewport={{ once: true }}
           className="md:w-1/2 w-full border bg-slate-300 h-[350px] md:h-full z-10 rounded-[12px]"
         >
-          <Map />
+          {/* <Map /> */}
+          <GoogleMaps />
         </MotionDiv>
       </div>
     </div>
