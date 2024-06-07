@@ -7,6 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       allow: ['/', '/services', 'works', '/about', '/contact'],
       disallow: '/private/',
     },
-    sitemap: `${process.env.BASE_URL}/sitemap.xml`,
+    sitemap: `${
+      process.env.BASE_URL || 'https://kanabagi-group.vercel.app'
+    }/sitemap.xml`,
   };
 }
