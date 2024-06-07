@@ -17,12 +17,18 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kanabagi-group.vercel.app/'),
+  metadataBase: new URL(
+    process.env.BASE_URL || 'https://kanabagi-group.vercel.app'
+  ),
   keywords: [
     'kanabagi',
     'kanabagi group',
+    'kanabagigroup',
     'kanabagi profile',
+    'kanabagi profile website',
     'kanabagi web development',
+    'web development tasikmalaya',
+    'pembuatan website tasikmalaya',
   ],
   title: {
     default: 'Web Development - Kanabagi',
