@@ -17,9 +17,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.BASE_URL || 'https://kanabagi-group.vercel.app'
-  ),
+  metadataBase: new URL(`${process.env.BASE_URL}`),
+  verification: { google: 'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8' },
   keywords: [
     'kanabagi',
     'kanabagi group',
@@ -37,7 +36,13 @@ export const metadata: Metadata = {
   description:
     'Hello! We are the right partner in realizing your business ideas into digital form. We provide company profile website development services and landing pages that you need with high quality production. We prioritize the quality of UI/UX in the product that we will create by using tech stacks such as ReactJS/NextJS, Typescript, and Tailwind CSS.',
   openGraph: {
+    title: 'Web Development - Kanabagi',
     images: '/opengraph-image.png',
+    description:
+      'Hello! We are the right partner in realizing your business ideas into digital form. We provide company profile website development services and landing pages that you need with high quality production. We prioritize the quality of UI/UX in the product that we will create by using tech stacks such as ReactJS/NextJS, Typescript, and Tailwind CSS.',
+    type: 'website',
+    siteName: 'Kanabagi',
+    url: `${process.env.BASE_URL}`,
   },
 };
 
