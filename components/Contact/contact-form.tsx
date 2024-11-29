@@ -3,24 +3,14 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaCheckCircle } from 'react-icons/fa';
-import { FaCircleXmark } from 'react-icons/fa6';
 import { PulseLoader } from 'react-spinners';
-import Alert from '../alert';
+import { FormInput } from '@/types';
+import { ToastError, ToastSuccess } from '../Toast';
 import ContactHeader from './contact-header';
 import OfficeIdentity from './office-identity';
-
-interface FormInput {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-}
+import { InputFields, TextAreaFields } from './input-fields';
 
 export default function ContactForm() {
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
@@ -34,11 +24,6 @@ export default function ContactForm() {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
 
-  const removeAlert = () => {
-    setSuccess(false);
-    setError(false);
-  };
-
   const onSubmit = async (data: FormInput) => {
     try {
       setLoading(true);
@@ -50,12 +35,10 @@ export default function ContactForm() {
           text: `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nCompany: ${data.company}\nMessage: ${data.message}`,
         }
       );
-      console.log('Message sent successfully:', response.data);
-      setSuccess(true);
+      ToastSuccess({ message: 'Message sent successfully!' });
       reset();
     } catch (error) {
-      setError(true);
-      console.error('Failed to send message:', error);
+      ToastError({ message: 'Failed to send message' });
     } finally {
       setLoading(false);
       setShowButton(true);
@@ -70,76 +53,65 @@ export default function ContactForm() {
       noValidate
     >
       <ContactHeader />
-      {errors.name && (
-        <span className="text-red-500">{errors.name.message}</span>
-      )}
-      <input
-        type="text"
+      <InputFields
         id="name"
-        {...register('name', { required: 'Please enter your name' })}
-        name="name"
+        type="text"
         placeholder="Name*"
-        className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
+        name="name"
+        register={register}
+        validation={{ required: 'Please enter your name' }}
+        error={errors.name}
+        ariaInvalid={!!errors.name}
       />
-
-      {errors.email && (
-        <span className="text-red-500">{errors.email.message}</span>
-      )}
-      <input
-        type="email"
+      <InputFields
         id="email"
-        {...register('email', {
+        type="email"
+        placeholder="Email*"
+        name="email"
+        register={register}
+        validation={{
           required: 'Please enter your email',
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             message:
               'Invalid email address. Please use example@example.com format',
           },
-        })}
-        aria-invalid={errors.email ? 'true' : 'false'}
-        name="email"
-        placeholder="Email*"
-        className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
+        }}
+        error={errors.email}
+        ariaInvalid={!!errors.email}
       />
-
-      {errors.phone && (
-        <span className="text-red-500">{errors.phone.message}</span>
-      )}
-      <input
-        type="text"
+      <InputFields
         id="phone"
+        type="text"
         placeholder="Phone*"
-        {...register('phone', {
+        name="phone"
+        register={register}
+        validation={{
           required: 'Please enter your phone number',
           pattern: {
             value: /^.{9,15}$/,
             message: 'phone number should be 9 to 15 characters long.',
           },
-        })}
-        name="phone"
-        aria-invalid={errors.phone ? 'true' : 'false'}
-        className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
+        }}
+        error={errors.phone}
+        ariaInvalid={!!errors.phone}
       />
-
-      <input
-        type="text"
+      <InputFields
         id="company"
-        {...register('company')}
+        type="text"
         placeholder="Company"
         name="company"
-        className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
+        register={register}
+        validation={{}}
+        error={errors.company}
       />
-
-      {errors.message && (
-        <span className="text-red-500">{errors.message.message}</span>
-      )}
-      <textarea
-        rows={5}
+      <TextAreaFields
         id="message"
-        {...register('message', { required: 'Please enter your message' })}
         placeholder="Message*"
         name="message"
-        className="py-2 px-4 outline-none ring-1 ring-gray-300 focus:ring-gray-800 rounded-lg transition-all duration-300 ease-in-out"
+        register={register}
+        validation={{ required: 'Please enter your message' }}
+        error={errors.message}
       />
       {showButton && (
         <button
@@ -153,26 +125,6 @@ export default function ContactForm() {
         <div className="flex justify-center">
           <PulseLoader size={15} color={`#2e3192`} speedMultiplier={0.5} />
         </div>
-      )}
-      {success && (
-        <Alert
-          status="Success!"
-          message="Your message has been sent."
-          Icon={FaCheckCircle}
-          iconColor="text-green-500"
-          borderColor="border-green-500"
-          onClick={removeAlert}
-        />
-      )}
-      {error && (
-        <Alert
-          status="Error!"
-          message="Something went wrong, please try again later."
-          Icon={FaCircleXmark}
-          iconColor="text-red-500"
-          borderColor="border-red-500"
-          onClick={removeAlert}
-        />
       )}
       <OfficeIdentity />
     </form>
