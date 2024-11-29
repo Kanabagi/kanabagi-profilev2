@@ -9,6 +9,7 @@ interface workProps {
     name: string;
     imgUrl: string;
     link: string;
+    desc: string;
 }
 
 const Website = ({ works }: { works: workProps }) => {
@@ -46,8 +47,7 @@ const Website = ({ works }: { works: workProps }) => {
                         <span className='text-gray-400 max-md:text-[16px]'>Website</span>
                         <h1 className='lg:text-[24px] md:text-[20px] text-[18px] font-medium'>{works.name}</h1>
                     </div>
-                    <p className='md:text-[16px] text-[14px] text-gray-500 max-w-xl mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nulla corporis
-                        placeat illum quas iure, repellat tempore eum fugit enim.
+                    <p className='md:text-[16px] text-[14px] text-gray-500 max-w-xl mt-2'>{works.desc}
                     </p>
                     <div className='mt-10'>
                         <span className='text-gray-300 font-mdium'>Kanabagi グループ</span>

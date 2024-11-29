@@ -2,7 +2,6 @@ import { featuredWorksHome } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
-import { FaArrowRightLong } from 'react-icons/fa6'
 import CardHome from './CardHome'
 import { Button } from '../ui/button'
 import { motion } from 'framer-motion';

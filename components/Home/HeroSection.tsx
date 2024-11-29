@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
     return (
-        <section className="flex min-h-screen bg-hero bg-cover bg-center relative">
+        <section className="flex min-h-screen bg-center relative">
+            <Image src="/images/hero.jpg" alt='hero' width={800} height={800} className='absolute w-full h-full object-cover object-center' />
             <div className="absolute bg-[#2e3192]/30 w-full h-screen" />
             <div className="wrapper flex items-center max-md:justify-center z-10">
                 <div className="flex flex-col gap-4">
