@@ -5,7 +5,8 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Web Development - Kanabagi',
     short_name: 'Kanabagi',
     description:
-      'Hello! We are the right partner in realizing your business ideas into digital form. We provide company profile website development services and landing pages that you need with high quality production. We prioritize the quality of UI/UX in the product that we will create by using tech stacks such as ReactJS/NextJS, Typescript, and Tailwind CSS.',
+      'Hello! We are the right partner in realizing your business ideas into digital form.',
+    start_url: '/',
     icons: [
       {
         src: '/android-chrome-192x192.png',
