@@ -4,10 +4,8 @@ import Progressbar from '@/components/ProgressBar';
 import ScrollTop from '@/components/ScrollTop';
 import type { Metadata, Viewport } from 'next';
 import { Poppins } from 'next/font/google';
-import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from './about/loading';
 import './globals.css';
 
 const poppins = Poppins({
@@ -67,7 +65,8 @@ export default function RootLayout({
       <body className={`${poppins.variable}`}>
         <Navbar />
         <Progressbar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        {children}
+        {/* <Suspense fallback={<Loading />}>{children}</Suspense> */}
         {/* <ChatUs /> */}
         <ScrollTop />
         <Footer />
