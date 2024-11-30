@@ -4,11 +4,10 @@ import Progressbar from '@/components/ProgressBar';
 import ScrollTop from '@/components/ScrollTop';
 import type { Metadata, Viewport } from 'next';
 import { Poppins } from 'next/font/google';
-import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from './about/loading';
 import './globals.css';
+import ProgressBarProviders from '@/providers/ProgressBarProvider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -65,13 +64,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={`${poppins.variable}`}>
-        <Navbar />
-        <Progressbar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
-        {/* <ChatUs /> */}
-        <ScrollTop />
-        <Footer />
-        <ToastContainer />
+        <ProgressBarProviders>
+          <Navbar />
+          <Progressbar />
+          {children}
+          {/* <Suspense fallback={<Loading />}>{children}</Suspense> */}
+          {/* <ChatUs /> */}
+          <ScrollTop />
+          <Footer />
+          <ToastContainer />
+        </ProgressBarProviders>
       </body>
     </html>
   );
