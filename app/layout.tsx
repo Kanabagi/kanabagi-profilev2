@@ -21,10 +21,6 @@ export const metadata: Metadata = {
   verification: { google: 'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8' },
   applicationName: 'Web Development - Kanabagi',
   manifest: '/manifest.json',
-  appleWebApp: {
-    title: 'Web Development - Kanabagi',
-    statusBarStyle: 'default',
-  },
   creator: 'Kanabagi',
   title: {
     default: 'Web Development - Kanabagi',
