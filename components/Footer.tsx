@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { footer, nav } from '@/constants';
 import Image from 'next/image';
@@ -13,15 +13,19 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{
-            opacity: 1, x: 1,
+            opacity: 1,
+            x: 1,
             transition: {
               delay: 0.2,
               duration: 0.5,
-              ease: 'linear'
-            }
-          }} viewport={{ once: true }}
-          className="flex flex-col gap-2">
+              ease: 'linear',
+            },
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-2"
+        >
           <Link
+            data-disable-nprogress={true}
             href="/"
             className="relative h-[80px] w-[215px] md:h-[60px] md:w-[195px]"
           >
@@ -42,14 +46,17 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{
-            opacity: 1, x: 1,
+            opacity: 1,
+            x: 1,
             transition: {
               delay: 0.3,
               duration: 0.5,
-              ease: 'linear'
-            }
-          }} viewport={{ once: true }}
-          className="flex flex-col gap-2">
+              ease: 'linear',
+            },
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-2"
+        >
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Contact Us
           </div>
@@ -59,6 +66,7 @@ const Footer = () => {
               className="text-gray-400 text-sm md:text-xs lg:text-sm flex flex-col gap-2 w-max md:max-w-40"
             >
               <Link
+                data-disable-nprogress={true}
                 href={item.url}
                 className="hover:text-white hover:underline"
                 target="_blank"
@@ -71,14 +79,17 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{
-            opacity: 1, x: 1,
+            opacity: 1,
+            x: 1,
             transition: {
               delay: 0.4,
               duration: 0.5,
-              ease: 'linear'
-            }
-          }} viewport={{ once: true }}
-          className="flex flex-col gap-2">
+              ease: 'linear',
+            },
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-2"
+        >
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Quick Links
           </div>
@@ -99,20 +110,24 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{
-            opacity: 1, x: 1,
+            opacity: 1,
+            x: 1,
             transition: {
               delay: 0.5,
               duration: 0.5,
-              ease: 'linear'
-            }
-          }} viewport={{ once: true }}
-          className="flex flex-col gap-2">
+              ease: 'linear',
+            },
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-2"
+        >
           <div className="font-semibold text-[#F8FAFC] text-xl md:text-base lg:text-xl xl:text-2xl mb-2">
             Connect With Us
           </div>
           <div className="text-[#D1D5DB] text-sm flex gap-6 items-center">
             {nav[1].navSocial?.map((item, index) => (
               <Link
+                data-disable-nprogress={true}
                 key={index}
                 href={item.path}
                 className="relative h-[35px] w-[35px] md:h-[25px] md:w-[25px] lg:h-[35px] lg:w-[35px] group hover:scale-95 transition-transform duration-300 ease-in-out"

@@ -100,6 +100,7 @@ export default function Hamburger() {
         <div className="flex gap-4">
           {nav[1].navSocial?.map((item, index) => (
             <Link
+              data-disable-nprogress={true}
               key={index}
               href={item.path}
               className={`group relative -mt-20 h-[35px] w-[35px] hover:scale-95 transition-transform duration-300 ease-in-out ${

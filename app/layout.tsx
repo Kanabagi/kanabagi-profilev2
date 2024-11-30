@@ -2,13 +2,12 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 import Progressbar from '@/components/ProgressBar';
 import ScrollTop from '@/components/ScrollTop';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Poppins } from 'next/font/google';
-import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from './about/loading';
 import './globals.css';
+import ProgressBarProviders from '@/providers/ProgressBarProvider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,16 +18,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.BASE_URL}`),
   verification: { google: 'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8' },
-  keywords: [
-    'kanabagi',
-    'kanabagi group',
-    'kanabagigroup',
-    'kanabagi profile',
-    'kanabagi profile website',
-    'kanabagi web development',
-    'web development tasikmalaya',
-    'pembuatan website tasikmalaya',
-  ],
+  applicationName: 'Web Development - Kanabagi',
+  manifest: '/manifest.json',
+  creator: 'Kanabagi',
   title: {
     default: 'Web Development - Kanabagi',
     template: '%s - Kanabagi',
@@ -44,6 +36,24 @@ export const metadata: Metadata = {
     siteName: 'Kanabagi',
     url: `${process.env.BASE_URL}`,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#2E3192',
 };
 
 export default function RootLayout({
@@ -54,14 +64,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={`${poppins.variable}`}>
-        <Navbar />
-        <Progressbar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
-
-        {/* <ChatUs /> */}
-        <ScrollTop />
-        <Footer />
-        <ToastContainer />
+        <ProgressBarProviders>
+          <Navbar />
+          <Progressbar />
+          {children}
+          {/* <Suspense fallback={<Loading />}>{children}</Suspense> */}
+          {/* <ChatUs /> */}
+          <ScrollTop />
+          <Footer />
+          <ToastContainer />
+        </ProgressBarProviders>
       </body>
     </html>
   );

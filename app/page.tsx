@@ -8,10 +8,8 @@ import ServicesHome from '@/components/Home/ServicesHome';
 import TechStacks from '@/components/Home/TechStacks';
 
 export default function Home() {
-
   return (
     <main className="relative" id="top-home">
-
       <HeroSection />
       <AfterHesec />
       <FeaturedWorks />
@@ -19,7 +17,6 @@ export default function Home() {
       <OurTeam />
       <TechStacks />
       <section className="h-[100px]"></section>
-
     </main>
   );
 }
