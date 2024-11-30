@@ -145,3 +145,27 @@ export const featuredWorksDetail = [
         desc: 'Kanasave is a website that provides downloader tools for social media platforms',
     },
 ]
+
+export const ourTeam = [
+    {
+        name: 'Farid F Muharam',
+        role: 'Meuli nasgor yuk',
+        imgUrl: '/images/farid.png',
+        imgUrlHover: '/images/farid-hover.png',
+        link: 'https://www.foriio.com/akariku'
+    },
+    {
+        name: 'Ahmad Bisry',
+        role: 'Frontend Dev',
+        imgUrl: '/images/bisry.png',
+        imgUrlHover: '/images/bisry-hover.png',
+        link: 'https://ahmadbisry.vercel.app/'
+    },
+    {
+        name: 'Rifky Alfarez',
+        role: 'Frontend Dev',
+        imgUrl: '/images/rifky.png',
+        imgUrlHover: '/images/rifky-hover.png',
+        link: 'https://rifkyalfarez.vercel.app/'
+    },
+]

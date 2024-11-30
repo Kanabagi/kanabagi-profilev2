@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function AboutCard() {
   return (
     <>
-      <div className="wrapper flex flex-col lg:flex-row justify-center items-center gap-8 mb-[125px]">
+      <div className="wrapper flex flex-col lg:flex-row justify-center items-center gap-8">
         {about[0].cardData.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, scale:0.9 }}
