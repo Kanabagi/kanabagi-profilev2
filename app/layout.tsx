@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './globals.css';
 import ProgressBarProviders from '@/providers/ProgressBarProvider';
+import { BASE_URL } from '@/constants';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,8 +17,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${process.env.BASE_URL}`),
-  verification: { google: 'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8' },
+  metadataBase: new URL(`${BASE_URL}`),
+  verification: {
+    google: [
+      'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8',
+      'YuVVMYALc1apNFIxonYJW4Ld6Lk8CBxmztpZejK_SIo',
+    ],
+  },
   applicationName: 'Web Development - Kanabagi',
   manifest: '/manifest.json',
   creator: 'Kanabagi',
@@ -34,7 +40,7 @@ export const metadata: Metadata = {
       'Hello! We are the right partner in realizing your business ideas into digital form. We provide company profile website development services and landing pages that you need with high quality production. We prioritize the quality of UI/UX in the product that we will create by using tech stacks such as ReactJS/NextJS, Typescript, and Tailwind CSS.',
     type: 'website',
     siteName: 'Kanabagi',
-    url: `${process.env.BASE_URL}`,
+    url: `${BASE_URL}`,
   },
   robots: {
     index: true,

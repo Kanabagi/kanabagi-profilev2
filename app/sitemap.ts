@@ -1,30 +1,36 @@
+import { BASE_URL } from '@/constants';
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${process.env.BASE_URL}`,
+      url: `${BASE_URL}`,
       lastModified: new Date(),
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${process.env.BASE_URL}/about`,
+      url: `${BASE_URL}/about`,
       lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${process.env.BASE_URL}/works`,
+      url: `${BASE_URL}/works`,
       lastModified: new Date(),
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${process.env.BASE_URL}/contact`,
+      url: `${BASE_URL}/contact`,
       lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${process.env.BASE_URL}/services`,
+      url: `${BASE_URL}/services`,
       lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
   ];

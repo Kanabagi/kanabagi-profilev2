@@ -169,3 +169,5 @@ export const ourTeam = [
     link: 'https://rifkyalfarez.vercel.app/',
   },
 ];
+
+export const BASE_URL = process.env.BASE_URL || 'https://kanabagi.vercel.app';
