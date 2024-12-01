@@ -47,22 +47,22 @@ export const nav = [
 ];
 
 export const footer = [
-    {
-        contact: [
-            {
-                name: 'Jl. Jiwa Besar No.27, Kota Tasikmalaya',
-                url: 'https://maps.app.goo.gl/bTXdJVdVkGGhEVFW6',
-            },
-            {
-                name: 'kanabagigroup@gmail.com',
-                url: 'mailto:kanabagigroup@gmail.com',
-            },
-            {
-                name: '+6282118437032',
-                url: 'https://wa.link/hhvxf2',
-            },
-        ],
-    },
+  {
+    contact: [
+      {
+        name: 'Jl. Jiwa Besar No.27, Kota Tasikmalaya',
+        url: 'https://maps.app.goo.gl/bTXdJVdVkGGhEVFW6',
+      },
+      {
+        name: 'kanabagigroup@gmail.com',
+        url: 'mailto:kanabagigroup@gmail.com',
+      },
+      {
+        name: '+6282118437032',
+        url: 'https://wa.link/hhvxf2',
+      },
+    ],
+  },
 ];
 
 export const featuredWorksHome = [
@@ -147,25 +147,27 @@ export const featuredWorksDetail = [
 ];
 
 export const ourTeam = [
-    {
-        name: 'Farid F Muharam',
-        role: 'Meuli nasgor yuk',
-        imgUrl: '/images/farid.png',
-        imgUrlHover: '/images/farid-hover.png',
-        link: 'https://fori.io/akaari'
-    },
-    {
-        name: 'Ahmad Bisry',
-        role: 'Frontend Dev',
-        imgUrl: '/images/bisry.png',
-        imgUrlHover: '/images/bisry-hover.png',
-        link: 'https://ahmadbisry.vercel.app/'
-    },
-    {
-        name: 'Rifky Alfarez',
-        role: 'Frontend Dev',
-        imgUrl: '/images/rifky.png',
-        imgUrlHover: '/images/rifky-hover.png',
-        link: 'https://rifkyalfarez.vercel.app/'
-    },
-]
+  {
+    name: 'Farid F Muharam',
+    role: 'Meuli nasgor yuk',
+    imgUrl: '/images/farid.png',
+    imgUrlHover: '/images/farid-hover.png',
+    link: 'https://www.foriio.com/akariku',
+  },
+  {
+    name: 'Ahmad Bisry',
+    role: 'Frontend Dev',
+    imgUrl: '/images/bisry.png',
+    imgUrlHover: '/images/bisry-hover.png',
+    link: 'https://ahmadbisry.vercel.app/',
+  },
+  {
+    name: 'Rifky Alfarez',
+    role: 'Frontend Dev',
+    imgUrl: '/images/rifky.png',
+    imgUrlHover: '/images/rifky-hover.png',
+    link: 'https://rifkyalfarez.vercel.app/',
+  },
+];
+
+export const BASE_URL = process.env.BASE_URL || 'https://kanabagi.vercel.app';
