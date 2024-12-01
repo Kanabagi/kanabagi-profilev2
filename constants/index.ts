@@ -58,8 +58,8 @@ export const footer = [
         url: 'mailto:kanabagigroup@gmail.com',
       },
       {
-        name: '+6289518706845',
-        url: 'https://api.whatsapp.com/send/?phone=6289518706845&text&type=phone_number&app_absent=0',
+        name: '+6282118437032',
+        url: 'https://wa.link/hhvxf2',
       },
     ],
   },
